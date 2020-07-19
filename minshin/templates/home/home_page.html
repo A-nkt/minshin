@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+
+  {% image self.banner_image width-1500 as img %}
+
+  <div class="jumbotron" style="background-image :url('{{ img.url }}'); background-size: cover; background-position:center center;">
+    <h1 class="display-4">{{ self.banner_title }}</h1>
+    <div class="lead">{{ self.banner_subtitle|richtext}}</div>
+    <!--p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p-->
+    {% if self.banner_cta %}
+      <a class="btn btn-primary btn-lg" href="#" role="button">@todo</a>
+    {% endif %}
+  </div>
+
+  <a href="past/" class="gazo-box1">
+    <img src="/static/img/startup-593327_1920.jpg" width="450px" height="350px"/>
+      <div class="mask">
+        <div class="caption">過去問検索</div>
+      </div>
+  </a>
+  <a href="upload/" class="gazo-box2">
+    <img src="/static/img/computer-1209641_1920.jpg"width="450px" height="350px" />
+      <div class="mask">
+        <div class="caption">過去問アップロード</div>
+      </div>
+  </a>
+
+    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="mr-auto">News</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <!--span aria-hidden="true">&times;</span-->
+        </button>
+      </div>
+      <div class="toast-body">
+        <li><a href="#">名古屋大学環境学研究科の過去問を更新しました！(2020/7/19)</a></li>
+        <li><a href="#">東京大学理学系研究科の過去問を更新しました！(2020/7/16)</a></li>
+      </div>
+    </div>
+
+
+{% endblock %}
