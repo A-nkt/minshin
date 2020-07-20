@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'contact',
     'upload',
     'univ',
+    'streams',
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
