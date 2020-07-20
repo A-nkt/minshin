@@ -40,3 +40,6 @@ padding-right: 4px !important;
 .gazo-box1:hover .mask,.gazo-box2:hover .mask {
 	opacity:		1;	/* マスクを表示する */
 }
+.content{
+  font-size: 12px !important;
+}

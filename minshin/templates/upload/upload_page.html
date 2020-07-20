@@ -29,6 +29,14 @@
 </div>
 {% endblock %}
 {% block content %}
+<div class="content">
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <!--li class="breadcrumb-item"><a href="#">Library</a></li-->
+  <li class="breadcrumb-item active">過去問アップロード</li>
+</ol>
+
 <h1>{{page.title}}</h1>
 <p>{{self.intro|richtext}}</p>
 
@@ -43,5 +51,6 @@
   </div>
   <input type="submit" class="btn btn-primary">
 </form>
+</div>
 
 {% endblock %}

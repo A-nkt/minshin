@@ -1,22 +1,17 @@
 {% extends "base.html" %}
 
 {% load wagtailcore_tags %}
-{% load static %}
-
-{% block css_file %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
-{% endblock %}
 
 {% block header_tab %}
 <div class="collapse navbar-collapse" id="navbarColor01">
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="/past/">過去問検索 <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/upload/">過去問アップロード</a>
     </li>
-    <li class="nav-item active">
+    <li class="nav-item">
       <a class="nav-link" href="/contact/">お問い合わせ</a>
     </li>
     <!--li class="nav-item">
@@ -33,23 +28,24 @@
 {% block content %}
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
-  <!--li class="breadcrumb-item"><a href="#">Library</a></li-->
-  <li class="breadcrumb-item active">お問い合わせ</li>
+  <li class="breadcrumb-item"><a href="/past/">過去問検索</a></li>
+  <li class="breadcrumb-item active">{{self.title}}</li>
 </ol>
 
 
-<div class="content">
-  <h1>{{page.title}}</h1>
-  <p>{{self.intro|richtext}}</p>
 
-  <form action="{% pageurl page %}" method="POST">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-    </table>
-    <input type="submit" class="btn btn-primary">
-  </form>
+<h1>{{self.title}}</h1>
+
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">
+    <h4>{{self.subtitle}}</h4>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in
+  </a>
+  <a href="#" class="list-group-item list-group-item-action disabled">Morbi leo risus
+  </a>
 </div>
+<p>{{self.body|richtext}}</p>
 
 
 {% endblock %}
