@@ -10,6 +10,10 @@ float: left !important;
 padding-right: 4px !important;
 }
 
+.figure_img{
+  width:25vw;
+  height:20vw;
+}
 .gazo-box1,.gazo-box2 {
   /*width:400px;
   height:350px;*/
@@ -21,13 +25,19 @@ padding-right: 4px !important;
   font-size: 24px;
 }
 .gazo-box1 .caption,.gazo-box2 .caption {
-	font-size:		130%;
-	text-align: 		center;
-	padding-top:		150px;
-	color:			#fff;
+	position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 150%;
 }
 .gazo-box1 .mask,.gazo-box2 .mask {
-	width:			99%;
+	width: 99%;
 	height:			100%;
 	position:		absolute;	/* 絶対位置指定 */
 	top:			0;
