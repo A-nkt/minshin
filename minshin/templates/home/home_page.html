@@ -1,6 +1,10 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% load wagtailcore_tags wagtailimages_tags %}
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home_page.css' %}">
+{% endblock %}
 
 {% block header_tab %}
 <div class="collapse navbar-collapse" id="navbarColor01">
@@ -41,6 +45,19 @@
     {% endif %}
   </div>
 
+  <div id="news_fields" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="mr-auto">News</strong>
+      <!--button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</>
+      </button-->
+    </div>
+    <div class="toast-body">
+      <li><a href="/">・みんなの院試を開設しました！(2020/7/17)</a></li>
+      <li><a href="past/">・10大学に対象を広げました！(2020/7/20)</a></li>
+    </div>
+  </div>
+
   <div class="img_content">
   <a href="past/" class="gazo-box1">
     <img src="/static/img/startup-593327_1920.jpg" class="figure_img"/>
@@ -56,17 +73,6 @@
   </a>
   </div>
 
-    <div id="news_fields" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-        <strong class="mr-auto">News</strong>
-        <!--button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</>
-        </button-->
-      </div>
-      <div class="toast-body">
-        <li><a href="/">・みんなの院試を開設しました！(2020/7/17)</a></li>
-        <li><a href="past/">・10大学に対象を広げました！(2020/7/20)</a></li>
-      </div>
-    </div>
+
 
 {% endblock %}
