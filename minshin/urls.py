@@ -7,8 +7,11 @@ from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
+import file_upload.views as file_upload
+from django.urls import path
 
 urlpatterns = [
+    path('',include('file_upload.urls')),#
     url(r'^django-admin/', admin.site.urls),
 
     url(r'^admin/', include(wagtailadmin_urls)),

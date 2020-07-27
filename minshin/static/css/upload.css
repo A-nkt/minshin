@@ -1,3 +1,8 @@
 .text1{
   color:black;
 }
+.content_upload{
+  font-size: 110%!important;
+  /*text-align: center!important;*/
+  padding-left: 5%!important;
+}

@@ -1,5 +1,11 @@
 {% extends "base.html" %}
+
 {% load wagtailcore_tags %}
+{% load static %}
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock %}
 
 {% block header_tab %}
 <div class="collapse navbar-collapse" id="navbarColor01">

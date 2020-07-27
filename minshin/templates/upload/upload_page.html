@@ -29,7 +29,7 @@
 </div>
 {% endblock %}
 {% block content %}
-<div class="content">
+
 
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -37,20 +37,20 @@
   <li class="breadcrumb-item active">過去問アップロード</li>
 </ol>
 
+<div class="content_upload">
 <h1>{{page.title}}</h1>
 <p>{{self.intro|richtext}}</p>
 
-<form action="{% pageurl page %}" method="POST">
+<form action="{% pageurl page %}" method="POST" enctype="multipart/form-data">
   {% csrf_token %}
   <table>
       {{ form.as_table}}
   </table>
-  {{self.icon}}
-  <!--div class="form-group">
+  <div class="form-group">
     <div class="text1"><label for="exampleInputFile">過去問</label></div>
 
     <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-  </div-->
+  </div>
   <input type="submit" class="btn btn-primary">
 </form>
 </div>
