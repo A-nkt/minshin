@@ -3,6 +3,12 @@
 .img_content{
   margin-left: 300px;
 }
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 #news_fields{
   top: 0;
   right: 0;
@@ -32,12 +38,12 @@ li {
 }
 
 .footer {
-position: absolute;
+margin-top: auto;
+/*position: absolute;
 float: left;
 bottom: -200px;
 width: 100%;
-/* Set the fixed height of the footer here */
-height: 130px;
+height: 130px;*/
 background-color: black!important;
 }
 body > .container {
@@ -114,6 +120,22 @@ padding-left: 15px;
 }
 /*Tablet*/
 @media screen and (max-width:960px){
+  .img_content{
+    margin-left: 80px;
+  }
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#news_fields{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin:1% auto;
+}
 li p{
   margin-top:20px;
   padding-top: 10px;
@@ -136,10 +158,13 @@ li {
 }
 
 .footer {
+margin:auto;
+width: 100%;
+  /*
 position: absolute;
 float: left;
 bottom: -50px;
-width: 100%;
+
 /* Set the fixed height of the footer here */
 height: 130px;
 background-color: black!important;
@@ -168,10 +193,7 @@ padding-left: 15px;
   color:gray!important;
 }
 
-.gazo-box1,.gazo-box2 {
-float: left !important;
-padding-right: 4px !important;
-}
+
 
 .figure_img{
   width:32.5vw;
@@ -181,13 +203,15 @@ padding-right: 4px !important;
   /*width:400px;
   height:350px;*/
 	overflow:		hidden;
-	margin:			10px 8px 10px 16px;
+	margin:			10px 36px 10px 16px;
 	position:		relative;	/* 相対位置指定 */
 }
 .caption{
   font-size: 24px;
 }
 .gazo-box1 .caption,.gazo-box2 .caption {
+  float: left !important;
+  padding-right: 4px !important;
 	position:absolute;
   top:50%;
   left:50%;
@@ -221,6 +245,12 @@ padding-right: 4px !important;
 }
 /*SmartPhone*/
 @media screen and (max-width:560px){
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 #news_fields{
 }
 li p{
@@ -245,9 +275,11 @@ li {
 }
 
 .footer {
+margin:auto;
+/*
 float: left;
 bottom:-550px;
-width: 100%;
+width: 100%;*/
 height: 170px;
 background-color: black!important;
 }
@@ -275,20 +307,18 @@ padding-left: 15px;
   color:gray!important;
 }
 
-.gazo-box1,.gazo-box2 {
-float: left !important;
-padding-right: 4px !important;
-}
 
 .figure_img{
   width:85vw;
   height:70vw;
 }
 .gazo-box1,.gazo-box2 {
+  float: left !important;
+  padding-right: 0px !important;
   /*width:400px;
   height:350px;*/
 	overflow:		hidden;
-	margin:			10px 8px 10px 16px;
+	margin:			10px 8px 10px -60px;
 	position:		relative;	/* 相対位置指定 */
 }
 .caption{
