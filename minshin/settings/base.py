@@ -24,6 +24,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
+    'wagtail.contrib.styleguide',
     'widget_tweaks',
     'file_upload',
     'home',

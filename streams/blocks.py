@@ -16,8 +16,11 @@ class RichtextBlock(blocks.RichTextBlock):
         icon="edit"
         label="Full RichText"
 
-#class SubTitleBlock(blocks.RichTextBlock):
-#    class Meta:
-#        template="streams/Subtitle_block.html"
-#        icon="edit"
-#        label="SubtitleText"
+
+class NewsTitleBlock(blocks.StructBlock):
+    title=blocks.CharBlock(max_length=100,blank=True,null=True,help_text="Add news title")
+    link=blocks.CharBlock(max_length=100,blank=True,null=True,help_text="Add news link")
+    class Meta:
+        template="streams/news.html"
+        icon="edit"
+        label="Title"

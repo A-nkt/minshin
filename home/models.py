@@ -1,9 +1,10 @@
 from django.db import models
-
+from streams import blocks
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField
-from wagtail.admin.edit_handlers import FieldPanel,PageChooserPanel
+from wagtail.admin.edit_handlers import FieldPanel,PageChooserPanel,StreamFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.core.fields import StreamField
 
 class HomePage(Page):
     #Home page model.
@@ -12,8 +13,6 @@ class HomePage(Page):
 
     banner_title=models.CharField(max_length=100,blank=False,null=True)
     banner_subtitle=RichTextField(features=["bold","italic"])
-    news=models.CharField(max_length=100,blank=True,null=True)
-    news_link=models.CharField(max_length=100,blank=True,null=True)
     banner_image=models.ForeignKey(
         "wagtailimages.Image",
         null=True,
@@ -28,14 +27,20 @@ class HomePage(Page):
         on_delete=models.SET_NULL,
         related_name="+"
     )
+    content=StreamField(
+        [
+            ("title",blocks.NewsTitleBlock()),
+        ],
+        null=True,
+        blank=True
+    )
 
     content_panels=Page.content_panels + [
         FieldPanel("banner_title"),
         FieldPanel("banner_subtitle"),
         ImageChooserPanel("banner_image"),
         PageChooserPanel("banner_cta"),
-        FieldPanel("news"),
-        FieldPanel("news_link"),
+        StreamFieldPanel('content'),
     ]
 
     class Meta:
