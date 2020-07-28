@@ -12,6 +12,8 @@ class HomePage(Page):
 
     banner_title=models.CharField(max_length=100,blank=False,null=True)
     banner_subtitle=RichTextField(features=["bold","italic"])
+    news=models.CharField(max_length=100,blank=True,null=True)
+    news_link=models.CharField(max_length=100,blank=True,null=True)
     banner_image=models.ForeignKey(
         "wagtailimages.Image",
         null=True,
@@ -32,6 +34,8 @@ class HomePage(Page):
         FieldPanel("banner_subtitle"),
         ImageChooserPanel("banner_image"),
         PageChooserPanel("banner_cta"),
+        FieldPanel("news"),
+        FieldPanel("news_link"),
     ]
 
     class Meta:
