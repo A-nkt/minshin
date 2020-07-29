@@ -24,3 +24,11 @@ class NewsTitleBlock(blocks.StructBlock):
         template="streams/news.html"
         icon="edit"
         label="Title"
+
+class AboutTitleBlock(blocks.StructBlock):
+    title=blocks.CharBlock(max_length=100,blank=True,null=True,help_text="Add about title")
+    text=blocks.RichTextBlock(max_length=1000,blank=True,null=True,help_text="Add about content")
+    class Meta:
+        template="streams/about.html"
+        icon="edit"
+        label="Title"

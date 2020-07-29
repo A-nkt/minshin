@@ -1,5 +1,25 @@
 /*PC*/
 @media screen and (min-width:960px){
+  .link{
+    font-size: 18px;
+    padding: 2px;
+  }
+
+  .footer_parent,.footer_parent2{
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .footer_list,.footer_list2{
+    display: inline-block;
+    color: white;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 20px;
+  }
+  .footer_list a,.footer_list2 a{
+    color: white;
+  }
 .img_content{
   margin-left: 300px;
 }
@@ -120,6 +140,26 @@ padding-left: 15px;
 }
 /*Tablet*/
 @media screen and (max-width:960px){
+  .link{
+    font-size: 18px;
+    padding: 2px;
+  }
+
+  .footer_parent,.footer_parent2{
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .footer_list,.footer_list2{
+    display: inline-block;
+    color: white;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 20px;
+  }
+  .footer_list a,.footer_list2 a{
+    color: white;
+  }
   .img_content{
     margin-left: 80px;
   }
@@ -166,7 +206,7 @@ float: left;
 bottom: -50px;
 
 /* Set the fixed height of the footer here */
-height: 130px;
+height: 250px;
 background-color: black!important;
 }
 body > .container {
@@ -245,6 +285,27 @@ padding-left: 15px;
 }
 /*SmartPhone*/
 @media screen and (max-width:560px){
+  .link{
+    font-size: 18px;
+    padding: 2px;
+  }
+
+  .footer_parent,.footer_parent2{
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .footer_list,.footer_list2{
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    /*display: inline-block;
+    padding-right: 100px;
+    padding-left: 100px;*/
+  }
+  .footer_list a,.footer_list2 a{
+    color: white;
+  }
 body,
 #wrapper {
   display: flex;
@@ -280,7 +341,7 @@ margin:auto;
 float: left;
 bottom:-550px;
 width: 100%;*/
-height: 170px;
+height: 420px;
 background-color: black!important;
 }
 body > .container {
@@ -302,6 +363,7 @@ padding-left: 15px;
 
 .display-4{
   color:white!important;
+  font-size: 54px;
 }
 .jumbotron{
   color:gray!important;
