@@ -40,3 +40,10 @@ class RuleTitleBlock(blocks.StructBlock):
         template="streams/rule.html"
         icon="edit"
         label="Title"
+
+class RuleDate(blocks.StructBlock):
+    date=blocks.RichTextBlock(max_length=1000,blank=True,null=True,help_text="Add your Date")
+    class Meta:
+        template="streams/rule_date.html"
+        icon="edit"
+        label="Date"

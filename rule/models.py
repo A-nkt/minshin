@@ -14,6 +14,7 @@ class RulePage(Page):
     content=StreamField(
         [
             ("title",blocks.RuleTitleBlock()),
+            ("date",blocks.RuleDate()),
         ],
         null=True,
         blank=True
