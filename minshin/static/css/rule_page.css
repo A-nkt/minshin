@@ -1,0 +1,14 @@
+.rule_title{
+  font-size: 24px;
+  border-bottom: solid 2px silver;
+  padding-bottom: 0px;
+}
+.rule_content{
+  color: black;
+  padding-left: 5%!important;
+  font-size: 120%!important;
+  width:70%;
+}
+.rule_text{
+  padding-top: 30px;
+}

@@ -32,3 +32,11 @@ class AboutTitleBlock(blocks.StructBlock):
         template="streams/about.html"
         icon="edit"
         label="Title"
+
+class RuleTitleBlock(blocks.StructBlock):
+    title=blocks.RichTextBlock(max_length=100,blank=True,null=True,help_text="Add about title")
+    text=blocks.RichTextBlock(max_length=1000,blank=True,null=True,help_text="Add about content")
+    class Meta:
+        template="streams/rule.html"
+        icon="edit"
+        label="Title"

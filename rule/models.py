@@ -1,17 +1,24 @@
 from django.db import models
-
 from modelcluster.fields import ParentalKey
 from wagtail.core.models import Page
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.admin.edit_handlers import FieldPanel,StreamFieldPanel
 from wagtail.core.fields import RichTextField
-from wagtail.contrib.forms.models import AbstractEmailForm
+from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.core.fields import StreamField
+from streams import blocks
 
 # Create your models here.
 class RulePage(Page):
     template="rule/rule_page.html"
 
-    rule_text=RichTextField(blank=True)
+    content=StreamField(
+        [
+            ("title",blocks.RuleTitleBlock()),
+        ],
+        null=True,
+        blank=True
+    )
 
     content_panels=Page.content_panels+[
-        FieldPanel('rule_text'),
+        StreamFieldPanel('content'),
     ]

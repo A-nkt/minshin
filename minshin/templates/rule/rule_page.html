@@ -1,6 +1,10 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% load wagtailcore_tags %}
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/rule_page.css' %}">
+{% endblock %}
 
 {% block header_tab %}
 <div class="collapse navbar-collapse" id="navbarColor01">
@@ -33,6 +37,12 @@
   <li class="breadcrumb-item active">利用規約</li>
 </ol>
 
-<p>{{self.rule_text|richtext}}</p>
+
+<div class="rule_content">
+  {% for block in page.content %}
+  {% include_block block %}
+  {% endfor %}
+</div>
+
 
 {% endblock %}
