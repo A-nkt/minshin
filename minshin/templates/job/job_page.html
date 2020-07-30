@@ -1,10 +1,13 @@
 {% extends "base.html" %}
-{% load static %}
-{% load wagtailcore_tags wagtailimages_tags %}
 
+{% load wagtailcore_tags %}
+{% load static %}
+
+<!--
 {% block css_file %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/about_page.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
 {% endblock %}
+-->
 
 {% block header_tab %}
 <div class="collapse navbar-collapse" id="navbarColor01">
@@ -15,7 +18,7 @@
     <li class="nav-item">
       <a class="nav-link" href="/upload/">過去問アップロード</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="/contact/">お問い合わせ</a>
     </li>
     <!--li class="nav-item">
@@ -33,20 +36,20 @@
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
   <!--li class="breadcrumb-item"><a href="#">Library</a></li-->
-  <li class="breadcrumb-item active">みんなの院試について</li>
+  <li class="breadcrumb-item active">採用情報</li>
 </ol>
-{% image self.banner_image width-1500 as img %}
-<div class="jumbotron" style="background-image :url('{{ img.url }}'); background-size:cover; background-position:center center;">
-  <h1 class="display-4">{{ self.banner_title }}</h1>
-  <div class="lead">{{ self.banner_subtitle|richtext}}</div>
-</div>
 
-<div class="about">
-  <div class="about_concept">CONCEPT</div>
-  <div class="about_concept_text">みんなの院試の思想</div>
-  {% for block in page.content %}
-  {% include_block block %}
-  {% endfor %}
+<div class="content_job">
+  <h1>{{page.title}}</h1>
+  <p>{{self.intro|richtext}}</p>
+
+  <form action="{% pageurl page %}" method="POST">
+    {% csrf_token %}
+    <table class="contact_form">
+        {{ form.as_table }}
+    </table>
+    <input type="submit" class="btn btn-primary">
+  </form>
 </div>
 
 
