@@ -25,10 +25,12 @@ class JobPage(AbstractEmailForm):
     template="job/job_page.html"
 
     intro=RichTextField(blank=True)
+    text=RichTextField(blank=True)
     thank_you_text=RichTextField(blank=True)
 
     content_panels=AbstractEmailForm.content_panels+[
         FieldPanel('intro'),
+        FieldPanel('text'),
         InlinePanel('form_fields',label='Form Fields'),
         FieldPanel('thank_you_text'),
         MultiFieldPanel([

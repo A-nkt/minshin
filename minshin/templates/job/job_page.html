@@ -3,11 +3,11 @@
 {% load wagtailcore_tags %}
 {% load static %}
 
-<!--
+
 {% block css_file %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/job.css' %}">
 {% endblock %}
--->
+
 
 {% block header_tab %}
 <div class="collapse navbar-collapse" id="navbarColor01">
@@ -18,7 +18,7 @@
     <li class="nav-item">
       <a class="nav-link" href="/upload/">過去問アップロード</a>
     </li>
-    <li class="nav-item active">
+    <li class="nav-item">
       <a class="nav-link" href="/contact/">お問い合わせ</a>
     </li>
     <!--li class="nav-item">
@@ -41,14 +41,15 @@
 
 <div class="content_job">
   <h1>{{page.title}}</h1>
-  <p>{{self.intro|richtext}}</p>
+  <div class="job_intro">{{self.intro|richtext}}</div>
+  <div class="job_text">{{self.text|richtext}}</div>
 
   <form action="{% pageurl page %}" method="POST">
     {% csrf_token %}
     <table class="contact_form">
         {{ form.as_table }}
     </table>
-    <input type="submit" class="btn btn-primary">
+    <div class="job_input_btn"><input type="submit" class="btn btn-primary"></div>
   </form>
 </div>
 
