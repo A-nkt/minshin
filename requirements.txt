@@ -3,7 +3,7 @@ wagtail>=2.9,<2.10
 absl-py==0.8.1
 astor==0.8.0
 beautifulsoup4==4.8.1
-bleach==1.5.0
+bleach==3.1.4
 cachetools==3.1.1
 certifi==2019.9.11
 chardet==3.0.4
