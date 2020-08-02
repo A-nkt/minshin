@@ -1,0 +1,20 @@
+.content_job{
+  /*
+  width: 100%;
+  margin: 0 auto;
+  max-width: 600px;
+  */
+  font-size: 120%!important;
+  padding-left: 5%!important;
+  color: black;
+  padding-bottom: 20px;
+}
+.job_intro{
+  font-size: 16px;
+}
+.job_input_btn{
+  padding-top: 20px;
+}
+.job_text{
+  font-size: 16px;
+}

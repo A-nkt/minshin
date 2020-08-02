@@ -1,0 +1,59 @@
+/*PC*/
+@media screen and (min-width:960px){
+  .rule_title{
+    font-size: 24px;
+    border-bottom: solid 2px silver;
+    padding-bottom: 0px;
+  }
+  .rule_content{
+    color: black;
+    padding-left: 5%!important;
+    font-size: 120%!important;
+    width:70%;
+  }
+  .rule_text{
+    padding-top: 30px;
+  }
+  .rule_date{
+    font-size: 18px;
+  }
+}
+/*Tablet*/
+@media screen and (max-width:960px){
+  .rule_title{
+    font-size: 24px;
+    border-bottom: solid 2px silver;
+    padding-bottom: 0px;
+  }
+  .rule_content{
+    color: black;
+    padding-left: 5%!important;
+    font-size: 120%!important;
+    width:90%;
+  }
+  .rule_text{
+    padding-top: 30px;
+  }
+  .rule_date{
+    font-size: 18px;
+  }
+}
+/*SmartPhone*/
+@media screen and (max-width:560px){
+  .rule_title{
+    font-size: 24px;
+    border-bottom: solid 2px silver;
+    padding-bottom: 0px;
+  }
+  .rule_content{
+    color: black;
+    font-size: 120%!important;
+    width:90%;
+  }
+  .rule_text{
+    padding-top: 30px;
+  }
+  .rule_date{
+    font-size: 18px;
+  }
+}
