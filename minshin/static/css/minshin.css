@@ -1,6 +1,6 @@
 .home_figure_img{
   background-size: cover;
-  background-position: center;
+  background-position: center center;
 }
 .footer_content a{
   text-decoration: none;
