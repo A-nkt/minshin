@@ -11,15 +11,15 @@ from streams import blocks
 class RulePage(Page):
     template="rule/rule_page.html"
 
-    content=StreamField(
+    rule_content=StreamField(
         [
             ("title",blocks.RuleTitleBlock()),
             ("date",blocks.RuleDate()),
         ],
         null=True,
-        blank=True
+        blank=True,
     )
 
     content_panels=Page.content_panels+[
-        StreamFieldPanel('content'),
+        StreamFieldPanel('rule_content'),
     ]
