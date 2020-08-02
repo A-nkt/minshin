@@ -27,20 +27,20 @@ class HomePage(Page):
         on_delete=models.SET_NULL,
         related_name="+"
     )
-    content=StreamField(
-        [
-            ("title",blocks.NewsTitleBlock()),
-        ],
-        null=True,
-        blank=True,
-    )
+    #content=StreamField(
+        #[
+        #    ("title",blocks.NewsTitleBlock()),
+        #],
+        #null=True,
+        #blank=True,
+    #)
 
     content_panels=Page.content_panels + [
         FieldPanel("banner_title"),
         FieldPanel("banner_subtitle"),
         ImageChooserPanel("banner_image"),
         PageChooserPanel("banner_cta"),
-        StreamFieldPanel('content'),
+        #StreamFieldPanel('content'),
     ]
 
     class Meta:
