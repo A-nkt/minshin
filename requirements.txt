@@ -3,7 +3,7 @@ wagtail>=2.9,<2.10
 absl-py==0.8.1
 astor==0.8.0
 beautifulsoup4==4.8.1
-bleach==1.5.0
+bleach<=3.1.3
 cachetools==3.1.1
 certifi==2019.9.11
 chardet==3.0.4
@@ -48,7 +48,7 @@ odfpy==1.4.0
 openpyxl==3.0.0
 opt-einsum==3.1.0
 pandas==0.25.2
-Pillow==6.2.1
+Pillow < 7.1.0
 protobuf==3.10.0
 psycopg2==2.8.4
 pyasn1==0.4.8
