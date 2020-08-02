@@ -47,7 +47,7 @@ class CustomFormBuilder(FormBuilder):
         return forms.GenericIPAddressField(**options)
 
 class UploadPage(AbstractEmailForm):
-    
+
     template="upload/upload_page.html"
 
     intro=RichTextField(blank=True)
@@ -73,36 +73,3 @@ class UploadPage(AbstractEmailForm):
     #class Meta:
         #verbose_name="Upload Page"
         #verbose_name_plural="Upload Pages"
-
-
-"""
-class FormField(AbstractFormField):
-    # extend the built in field type choices
-    # our field type key will be 'ipaddress'
-    CHOICES = FORM_FIELD_CHOICES + (('ipaddress', 'IP Address'),)
-
-    page = ParentalKey('FormPage', related_name='form_fields')
-    # override the field_type field with extended choices
-    field_type = models.CharField(
-        verbose_name='field type',
-        max_length=16,
-        # use the choices tuple defined above
-        choices=CHOICES
-    )
-
-
-class CustomFormBuilder(FormBuilder):
-    # create a function that returns an instanced Django form field
-    # function name must match create_<field_type_key>_field
-    def create_ipaddress_field(self, field, options):
-        # return `forms.GenericIPAddressField(**options)` not `forms.SlugField`
-        # returns created a form field with the options passed in
-        return forms.GenericIPAddressField(**options)
-
-
-class FormPage(AbstractEmailForm):
-    # intro, thank_you_text, edit_handlers, etc...
-
-    # use custom form builder defined above
-    form_builder = CustomFormBuilder
-"""

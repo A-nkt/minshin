@@ -18,8 +18,8 @@ class RichtextBlock(blocks.RichTextBlock):
 
 
 class NewsTitleBlock(blocks.StructBlock):
-    title=blocks.CharBlock(max_length=100,blank=True,null=True,help_text="Add news title")
-    link=blocks.CharBlock(max_length=100,blank=True,null=True,help_text="Add news link")
+    title=blocks.CharBlock(max_length=100,blank=True,help_text="Add news title")
+    link=blocks.CharBlock(max_length=100,blank=True,help_text="Add news link")
     class Meta:
         template="streams/news.html"
         icon="edit"
