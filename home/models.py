@@ -32,7 +32,7 @@ class HomePage(Page):
             ("title",blocks.NewsTitleBlock()),
         ],
         null=True,
-        blank=True
+        blank=True,
     )
 
     content_panels=Page.content_panels + [
