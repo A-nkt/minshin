@@ -20,13 +20,13 @@ class HomePage(Page):
         on_delete=models.SET_NULL,
         related_name="+"
     )
-    #banner_cta=models.ForeignKey(
-        #"wagtailcore.Page",
-        ##null=True,
-        #blank=True,
-        #on_delete=models.SET_NULL,
-        #related_name="+"
-    #)
+    banner_cta=models.ForeignKey(
+        "wagtailcore.Page",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="+"
+    )
     content_home=StreamField(
         [
             ("title",blocks.NewsTitleBlock()),
