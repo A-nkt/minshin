@@ -27,7 +27,7 @@ class HomePage(Page):
         on_delete=models.SET_NULL,
         related_name="+"
     )
-    content_home=StreamField(
+    content=StreamField(
         [
             ("title",blocks.NewsTitleBlock()),
         ],
@@ -39,8 +39,8 @@ class HomePage(Page):
         FieldPanel("banner_title"),
         FieldPanel("banner_subtitle"),
         ImageChooserPanel("banner_image"),
-        #PageChooserPanel("banner_cta"),
-        StreamFieldPanel('content_home'),
+        PageChooserPanel("banner_cta"),
+        StreamFieldPanel('content'),
     ]
 
     class Meta:
