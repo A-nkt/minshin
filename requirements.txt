@@ -1,7 +1,5 @@
 Django>=3.0,<3.1
 wagtail>=2.9,<2.10
-chardet==3.0.4
-cycler==0.10.0
 DateTime==4.3
 defusedxml==0.6.0
 diff-match-patch==20181111
