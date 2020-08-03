@@ -9,13 +9,10 @@ from streams import blocks
 class UnivPage(Page):
     template="univ/univ_page.html"
 
-    #subtitle=models.CharField(max_length=100,null=True,blank=True)
     content=StreamField(
         [
-            #("title_and_text",blocks.TitleAndTextBlock()),
             ("title_and_text",blocks.TitleAndTextBlock()),
             ("full_richtext",blocks.RichtextBlock()),
-            #("subtitle",blocks.SubTitleBlock()),
         ],
         null=True,
         blank=True
