@@ -15,9 +15,13 @@ django-ipware==2.1.0
 django-pandas==0.6.1
 django-widget-tweaks==1.4.5
 django-widgets-improved==1.5.0
-google-auth==1.7.1
 google-auth-oauthlib==0.4.1
 google-pasta==0.1.8
+google-api-core           1.22.0
+google-auth               1.20.0
+google-auth-oauthlib      0.4.1
+google-cloud-core         1.4.1
+google-cloud-storage      1.30.0
 gunicorn==19.9.0
 psycopg2==2.8.4
 requests==2.22.0
