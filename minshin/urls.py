@@ -10,10 +10,12 @@ from search import views as search_views
 import file_upload.views as file_upload
 from django.urls import path
 
+from wagtail.contrib.sitemaps.views import sitemap
+
 urlpatterns = [
     path('',include('file_upload.urls')),#
     url(r'^django-admin/', admin.site.urls),
-
+     url('^sitemap\.xml$', sitemap),
     url(r'^admin/', include(wagtailadmin_urls)),
     url(r'^documents/', include(wagtaildocs_urls)),
 
