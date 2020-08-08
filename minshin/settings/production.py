@@ -1,3 +1,4 @@
+#production.pyは本番環境用です。
 from .base import *
 
 DEBUG = False
