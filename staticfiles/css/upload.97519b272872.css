@@ -1,8 +1,8 @@
 .content_upload{
+  background-color: red!important;
   font-size: 110%!important;
   /*text-align: center!important;*/
   padding-left: 5%!important;
-  padding-bottom: 20px;
 }
 .upload_btn{
   padding-top: 20px;
