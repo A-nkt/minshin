@@ -14,20 +14,20 @@ from wagtail.contrib.forms.models import (
 )
 
 # Create your models here.
-class FormField(AbstractFormField):
+class FormField(AbstractFormField):#Formのフィールドを定義
     Page=ParentalKey(
-        'ContactPage',
+        'ContactPage',#反応させるclass名を入力
         on_delete=models.CASCADE,
         related_name='form_fields',
     )
 
-class ContactPage(AbstractEmailForm):
-    template="contact/contact_page.html"
+class ContactPage(AbstractEmailForm):#フォーム機能を実装したclassを定義
+    template="contact/contact_page.html"#返すhtmlファイルを定義
 
-    intro=RichTextField(blank=True)
-    thank_you_text=RichTextField(blank=True)
+    intro=RichTextField(blank=True)#RichTextFieldを定義
+    thank_you_text=RichTextField(blank=True)#RichTextFieldを定義
 
-    content_panels=AbstractEmailForm.content_panels+[
+    content_panels=AbstractEmailForm.content_panels+[#adminのパネルを定義
         FieldPanel('intro'),
         InlinePanel('form_fields',label='Form Fields'),
         FieldPanel('thank_you_text'),

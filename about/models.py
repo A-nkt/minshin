@@ -9,18 +9,18 @@ from streams import blocks
 
 # Create your models here.
 class AboutPage(Page):
-    template="about/about_page.html"
+    template="about/about_page.html"#対応するhtmlファイルを指定
 
-    banner_title=models.CharField(max_length=100,blank=True,null=True)
-    banner_subtitle=RichTextField(features=["bold","italic"],blank=True)
-    banner_image=models.ForeignKey(
+    banner_title=models.CharField(max_length=100,blank=True,null=True)#文字列のフィールドを定義
+    banner_subtitle=RichTextField(features=["bold","italic"],blank=True)#太字やその他色々な機能があるRichTextFieldを定義
+    banner_image=models.ForeignKey(#画像用のフィールドを定義
         "wagtailimages.Image",
         null=True,
         blank=False,
         on_delete=models.SET_NULL,
         related_name="+"
     )
-    content=StreamField(
+    content=StreamField(#Blockを使って、要素が可変的なモデルを定義
         [
             ("title",blocks.AboutTitleBlock()),
         ],
@@ -28,7 +28,7 @@ class AboutPage(Page):
         blank=True
     )
 
-    content_panels=Page.content_panels+[
+    content_panels=Page.content_panels+[#上記で定義した各フィールドを各Panelとして定義
         FieldPanel("banner_title"),
         FieldPanel("banner_subtitle"),
         ImageChooserPanel("banner_image"),
