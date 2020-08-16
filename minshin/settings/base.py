@@ -26,20 +26,20 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 INSTALLED_APPS = [
     'django_cleanup',
-    "django.contrib.sitemaps",
-    'job',
-    'rule',
-    'about',
+    "django.contrib.sitemaps",#サイトマップ用
+    'job',#採用情報
+    'rule',#利用規約
+    'about',#このサイトについて
     'wagtail.contrib.styleguide',
-    'widget_tweaks',
-    'file_upload',
-    'home',
-    'search',
-    'site_settings',
+    'widget_tweaks',#フォームのサイズを返すためのもの
+    'file_upload',#過去問アップロードフォーム
+    'home',#ホーム画面
+    'search',#検索画面
+    'site_settings',#SNS用のセッテイング
     'flex',
-    'contact',
-    'upload',
-    'univ',
+    'contact',#お問い合わせページ
+    'upload',#(旧)過去問アップロードフォーム
+    'univ',#大学ページ
     'streams',
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -169,20 +169,20 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'#ファイルのストレージを変更
 
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #MEDIA_URL = '/media/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'#ファイルのストレージを変更
 
 GS_BUCKET_NAME = 'minshin'
 
 from google.oauth2 import service_account
 
 GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
-    os.path.join(BASE_DIR, 'My Project 72481-3295e714262b.json'),
+    os.path.join(BASE_DIR, 'My Project 72481-3295e714262b.json'),#GCPのパスを接続
 )
 
 # Wagtail settings

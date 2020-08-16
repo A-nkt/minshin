@@ -13,17 +13,15 @@ from django.urls import path
 from wagtail.contrib.sitemaps.views import sitemap
 
 urlpatterns = [
-    path('',include('file_upload.urls')),#
-    url(r'^django-admin/', admin.site.urls),
-     url('^sitemap\.xml$', sitemap),
-    url(r'^admin/', include(wagtailadmin_urls)),
-    url(r'^documents/', include(wagtaildocs_urls)),
-
-    url(r'^search/$', search_views.search, name='search'),
+    path('',include('file_upload.urls')),#file_upload用のurl
+    url(r'^django-admin/', admin.site.urls),#Djangoの管理画面
+     url('^sitemap\.xml$', sitemap),#サイトマップ
+    url(r'^admin/', include(wagtailadmin_urls)),#wagtailの管理画面
+    url(r'^documents/', include(wagtaildocs_urls)),#存在しない模様(2020.08.16)
+    url(r'^search/$', search_views.search, name='search'),#検索
 ]
 
-
-if settings.DEBUG:
+if settings.DEBUG:#DEBUGの時
     from django.conf.urls.static import static
     from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
@@ -35,7 +33,7 @@ urlpatterns = urlpatterns + [
     # For anything not caught by a more specific rule above, hand over to
     # Wagtail's page serving mechanism. This should be the last pattern in
     # the list:
-    url(r"", include(wagtail_urls)),
+    url(r"", include(wagtail_urls)),#これはこのページの最後になければなりません。
 
     # Alternatively, if you want Wagtail pages to be served from a subpath
     # of your site, rather than the site root:
