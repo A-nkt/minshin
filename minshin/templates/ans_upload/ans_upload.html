@@ -1,10 +1,13 @@
 {% extends "base.html" %}
-
 {% load wagtailcore_tags %}
 {% load static %}
 
+{% block title %}
+過去問 / 解答アップロード
+{% endblock %}
+
 {% block css_file %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/upload.css' %}">
 {% endblock %}
 
 {% block header_tab %}
@@ -16,10 +19,10 @@
     <li class="nav-item">
       <a class="nav-link" href="/upload/">過去問アップロード</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="/ans_upload/">解答アップロード</a>
     </li>
-    <li class="nav-item active">
+    <li class="nav-item">
       <a class="nav-link" href="/contact/">お問い合わせ</a>
     </li>
     <!--li class="nav-item">
@@ -32,26 +35,25 @@
   </form-->
 </div>
 {% endblock %}
-
 {% block content %}
+
+
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
   <!--li class="breadcrumb-item"><a href="#">Library</a></li-->
-  <li class="breadcrumb-item active">お問い合わせ</li>
+  <li class="breadcrumb-item active">解答アップロード</li>
 </ol>
 
-
-<div class="content_contact">
-  <h1>{{page.title}}</h1>
-  <p>{{self.intro|richtext}}</p>
-
-  <form action="{% pageurl page %}" method="POST">
-    {% csrf_token %}
-    <table class="contact_form">
-        {{ form.as_table }}
-    </table>
-    <div class="job_input_btn"><input type="submit" class="btn btn-primary"></div>
-  </form>
+<div class="content_upload">
+<h1>解答アップロード</h1>
+<p>解答をアップロードしてください。</p>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <table>
+          {{ form.as_table}}
+      </table>
+      <div class="upload_btn"><input type="submit" class="btn btn-primary"></div>
+    </form>
 </div>
 
 

@@ -7,13 +7,14 @@ from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
-import file_upload.views as file_upload
+import file_upload.views as file_upload,ans_upload
 from django.urls import path
 
 from wagtail.contrib.sitemaps.views import sitemap
 
 urlpatterns = [
     path('',include('file_upload.urls')),#file_upload用のurl
+    path('',include('ans_upload.urls')),#ans_upload用のurl
     url(r'^django-admin/', admin.site.urls),#Djangoの管理画面
      url('^sitemap\.xml$', sitemap),#サイトマップ
     url(r'^admin/', include(wagtailadmin_urls)),#wagtailの管理画面

@@ -25,6 +25,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
+    'ans_upload',
     'django_cleanup',
     "django.contrib.sitemaps",#サイトマップ用
     'job',#採用情報
@@ -179,12 +180,14 @@ DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'#ファイ�
 
 GS_BUCKET_NAME = 'minshin'
 
+
+###GCP
 from google.oauth2 import service_account
 
 GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
     os.path.join(BASE_DIR, 'My Project 72481-3295e714262b.json'),#GCPのパスを接続
 )
-
+###GCP
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "minshin"
