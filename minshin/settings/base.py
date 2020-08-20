@@ -25,6 +25,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
+    'ans_univ',
     'ans_upload',
     'django_cleanup',
     "django.contrib.sitemaps",#サイトマップ用

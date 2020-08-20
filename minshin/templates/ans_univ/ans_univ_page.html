@@ -1,9 +1,10 @@
 {% extends "base.html" %}
-{% load static %}
+
 {% load wagtailcore_tags %}
+{% load static %}
 
 {% block css_file %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/rule_page.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
 {% endblock %}
 
 {% block header_tab %}
@@ -15,7 +16,7 @@
     <li class="nav-item">
       <a class="nav-link" href="/upload/">過去問アップロード</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="/ans_past/">解答検索</a>
     </li>
     <li class="nav-item">
@@ -35,21 +36,12 @@
 </div>
 {% endblock %}
 
-
 {% block content %}
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
   <!--li class="breadcrumb-item"><a href="#">Library</a></li-->
-  <li class="breadcrumb-item active">利用規約</li>
+  <li class="breadcrumb-item active">解答検索</li>
 </ol>
-
-
-<div class="rule_content">
-  {% for block in page.rule_content %}
-  {% include_block block %}
-  {% endfor %}
-</div>
-<br>
 
 
 {% endblock %}
