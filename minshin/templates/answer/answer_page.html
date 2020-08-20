@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load static %}
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/answer.css' %}">
+{% endblock %}
+
+{% block header_tab %}
+<div class="collapse navbar-collapse" id="navbarColor01">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="/past/">過去問検索 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/upload/">過去問アップロード</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="/ans_past/">解答検索</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/ans_upload/">解答アップロード</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contact/">お問い合わせ</a>
+    </li>
+    <!--li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li-->
+  </ul>
+  <!-- form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+  </form -->
+</div>
+{% endblock %}
+
+{% block content %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/past/">解答検索</a></li>
+  <li class="breadcrumb-item active">{{self.title}}</li>
+</ol>
+
+<div class="answer_content">
+  <h1>{{self.title}}</h1>
+
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#first">2019</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#second">2018</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#third">2017</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#four">2016</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#five">2015</a>
+    </li>
+    <!--li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li-->
+    <!--li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </li-->
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active show" id="first">
+      {% for block in page.first %}
+      {% include_block block %}
+      {% endfor %}
+    </div>
+    <div class="tab-pane fade" id="second">
+      {% for block in page.second %}
+      {% include_block block %}
+      {% endfor %}
+    </div>
+    <div class="tab-pane fade" id="third">
+      {% for block in page.third %}
+      {% include_block block %}
+      {% endfor %}
+    </div>
+    <div class="tab-pane fade" id="four">
+      {% for block in page.four %}
+      {% include_block block %}
+      {% endfor %}
+    </div>
+    <div class="tab-pane fade" id="five">
+      {% for block in page.five %}
+      {% include_block block %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+<!--
+<h1>{{self.title}}</h1>
+{% for block in page.content %}
+{% include_block block %}
+{% endfor %}
+-->
+
+{% endblock %}

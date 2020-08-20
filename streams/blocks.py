@@ -16,6 +16,21 @@ class RichtextBlock(blocks.RichTextBlock):
         icon="edit"
         label="Full RichText"
 
+class TitleAndTextBlockAns(blocks.StructBlock):
+    title=blocks.CharBlock(required=True,help_text="Add your title")
+    #text=blocks.RichTextBlock()
+
+    class Meta:
+        template="streams/title_and_text_block_ans.html"
+        icon="edit"
+        label="Title & Text"
+
+class RichtextBlockAns(blocks.RichTextBlock):
+    subtext=blocks.RichTextBlock()
+    class Meta:
+        template="streams/richtext_block_ans.html"
+        icon="edit"
+        label="Full RichText"
 
 class NewsTitleBlock(blocks.StructBlock):
     title=blocks.CharBlock(max_length=100,blank=True,null=True,help_text="Add news title")
