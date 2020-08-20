@@ -3,8 +3,12 @@
 {% load wagtailcore_tags %}
 {% load static %}
 
+{% block title %}
+過去問 / 解答検索
+{% endblock %}
+
 {% block css_file %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/ans_univ.css' %}">
 {% endblock %}
 
 {% block header_tab %}
@@ -42,6 +46,85 @@
   <!--li class="breadcrumb-item"><a href="#">Library</a></li-->
   <li class="breadcrumb-item active">解答検索</li>
 </ol>
+
+<div class="ans_univ_content">
+  <h1>国公立大学</h1>
+  <div class="tables">
+  <table class="type06">
+  <thead>
+    <tr>
+      <th>大学名</th>
+      <!--th>好きな食べ物</th-->
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>北海道大学</td>
+      <td>東北大学</td>
+      <td>東京大学</td>
+    </tr>
+    <tr>
+      <td>名古屋大学</td>
+      <td>京都大学</td>
+      <td>大阪大学</td>
+    </tr>
+    <tr>
+      <td>九州大学</td>
+      <td>東京都立大学</td>
+      <td></td>
+    </tr>
+    <!--tr>
+      <td>ニキータ</td>
+      <td>ビフストロガノフ</td>
+      <td>二郎</td>
+    </tr>
+    <tr>
+      <td>三郎</td>
+      <td>ちくわ</td>
+      <td>二郎</td>
+    </tr-->
+  </tbody>
+</table>
+</div>
+  <h1>私立大学</h1>
+  <div class="tables">
+  <table class="type06">
+  <thead>
+    <tr>
+      <th>大学名</th>
+      <!--th>好きな食べ物</th-->
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>早稲田大学</td>
+      <td>慶應義塾大学</td>
+      <td>上智大学</td>
+    </tr>
+    <!--tr>
+      <td>二郎</td>
+      <td>ラーメン</td>
+      <td>二郎</td>
+    </tr>
+    <tr>
+      <td>ジョン</td>
+      <td>ドーナツ</td>
+      <td>二郎</td>
+    </tr>
+    <tr>
+      <td>ニキータ</td>
+      <td>ビフストロガノフ</td>
+      <td>二郎</td>
+    </tr>
+    <tr>
+      <td>三郎</td>
+      <td>ちくわ</td>
+      <td>二郎</td>
+    </tr-->
+  </tbody>
+</table>
+</div>
+</div>
 
 
 {% endblock %}
