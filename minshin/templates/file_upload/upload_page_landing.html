@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags %}
+{% load static %}
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/upload.css' %}">
+{% endblock %}
 
 {% block header_tab %}
 <div class="collapse navbar-collapse" id="navbarColor01">
@@ -28,7 +33,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="content_upload">
+<div class="content_upload_text">
 <h1>アップロードありがとうございます。</h1>
 <p>管理人が内容を確認後、アップロードさせていただきます。</p>
 {% endblock %}

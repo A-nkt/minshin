@@ -7,3 +7,12 @@
 .upload_btn{
   padding-top: 20px;
 }
+.content_upload_text{
+  font-size: 110%!important;
+  /*text-align: center!important;*/
+  padding-left: 5%!important;
+  padding-bottom: 20px;
+  text-shadow: 1px 1px 0 silver;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
