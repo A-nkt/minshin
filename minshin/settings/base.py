@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
-    'answer',
-    'ans_univ',
-    'ans_upload',
+    'answer',#大学別過去問解答ページ
+    'ans_univ',#大学一覧ページ
+    'ans_upload',#過去問アップロードページ
     'django_cleanup',
     "django.contrib.sitemaps",#サイトマップ用
     'job',#採用情報
@@ -35,14 +35,11 @@ INSTALLED_APPS = [
     'about',#このサイトについて
     'wagtail.contrib.styleguide',
     'widget_tweaks',#フォームのサイズを返すためのもの
-    'file_upload',#過去問アップロードフォーム
     'home',#ホーム画面
     'search',#検索画面
     'site_settings',#SNS用のセッテイング
     'flex',
     'contact',#お問い合わせページ
-    'upload',#(旧)過去問アップロードフォーム
-    'univ',#大学ページ
     'streams',
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -200,7 +197,7 @@ BASE_URL = 'http://example.com'
 
 django_heroku.settings(locals())
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 """ メールサーバー用"""
 #EMAIL_HOST = 'smtp.gmail.com'
 #EMAIL_HOST_USER = 'dsduoa31@gmail.com'
