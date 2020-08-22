@@ -23,6 +23,7 @@ class FormField(AbstractFormField):#Formのフィールドを定義
 
 class ContactPage(AbstractEmailForm):#フォーム機能を実装したclassを定義
     template="contact/contact_page.html"#返すhtmlファイルを定義
+    landing_page_template = "contact/contact_page_landing.html"
 
     intro=RichTextField(blank=True)#RichTextFieldを定義
     thank_you_text=RichTextField(blank=True)#RichTextFieldを定義
@@ -38,5 +39,4 @@ class ContactPage(AbstractEmailForm):#フォーム機能を実装したclassを�
             ]),
             FieldPanel('subject'),
         ], heading="Email Settings"),
-
     ]
