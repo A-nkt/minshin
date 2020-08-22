@@ -1,0 +1,23 @@
+/*PC*/
+@media screen and (min-width:960px){
+.answer_content{
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.block_title{
+  padding-top: 10px;
+}
+}
+/*Tablet*/
+@media screen and (min-width:561px) and (max-width:960px){
+  .answer_content{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .block_title{
+    padding-top: 10px;
+  }
+}
+/*SmartPhone*/
+@media screen and (max-width:560px){
+}

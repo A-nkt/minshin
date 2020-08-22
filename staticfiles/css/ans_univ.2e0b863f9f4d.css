@@ -1,0 +1,119 @@
+/*PC*/
+@media screen and (min-width:960px){
+  .ans_univ_content{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .ans_univ_content p{
+    font-size: 18px;
+    text-decoration:underline;/*下線を引く*/
+    text-decoration-color:black;/*下線を赤色*/
+  }
+  table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+  }
+
+  table.type06 th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    background: #3f3f3f;
+    color: #ffffff;
+  }
+  table.type06 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) {
+    background: #d9d9d9;
+  }
+  .tables{
+    padding-bottom: 40px;
+    padding-top: 10px;
+    font-size: 14px;
+  }
+}
+
+/*Tablet*/
+@media screen and (min-width:561px) and (max-width:960px){
+  .ans_univ_content{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .ans_univ_content p{
+    font-size: 18px;
+    text-decoration:underline;/*下線を引く*/
+    text-decoration-color:black;/*下線を赤色*/
+  }
+  table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+  }
+
+  table.type06 th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    background: #3f3f3f;
+    color: #ffffff;
+  }
+  table.type06 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) {
+    background: #d9d9d9;
+  }
+  .tables{
+    padding-bottom: 40px;
+    padding-top: 10px;
+    font-size: 14px;
+  }
+}
+
+/*SmartPhone*/
+@media screen and (max-width:560px){
+  .ans_univ_content p{
+    font-size: 14px;
+    text-decoration:underline;/*下線を引く*/
+    text-decoration-color:black;/*下線を赤色*/
+  }
+  table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+  }
+
+  table.type06 th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    background: #3f3f3f;
+    color: #ffffff;
+  }
+  table.type06 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) {
+    background: #d9d9d9;
+  }
+  .tables{
+    padding-bottom: 40px;
+    padding-top: 10px;
+    font-size: 14px;
+  }
+
+}
