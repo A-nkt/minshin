@@ -10,3 +10,8 @@ li{
 .job_input_btn{
   padding-top: 20px;
 }
+.thank_you_text{
+  font-size: 20px;
+  padding-left: 10px;
+  text-shadow: 1px 1px 0 silver;
+}
