@@ -9,7 +9,7 @@ class File(models.Model):
     subfield = models.CharField(verbose_name='専攻以下',help_text='<p>できるだけ正確に記入してください</p>', max_length=100,null=True)
     subject = models.CharField(verbose_name='教科等',help_text='<p></p>', max_length=100,null=True)
     year=models.IntegerField(verbose_name='年度',help_text='<p>受験した年を入力してください<br>(例)2020年入学者用問題→2019年</p>',default=2019)
-    file = models.FileField(verbose_name='過去問',upload_to='past/')
+    file = models.FileField(verbose_name='過去問解答',upload_to='past/')
 
 
     def __str__(self):
