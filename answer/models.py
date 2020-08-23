@@ -13,39 +13,39 @@ class AnswerPage(Page):
             ("full_richtext",blocks.RichtextBlockAns()),
         ],
         null=True,
-        blank=True
+        blank=True,
     )
     second=StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlock()),
-            ("full_richtext",blocks.RichtextBlock()),
+            ("title_and_text",blocks.TitleAndTextBlockAns()),
+            ("full_richtext",blocks.RichtextBlockAns()),
         ],
         null=True,
-        blank=True
+        blank=True,
     )
     third=StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlock()),
-            ("full_richtext",blocks.RichtextBlock()),
+            ("title_and_text",blocks.TitleAndTextBlockAns()),
+            ("full_richtext",blocks.RichtextBlockAns()),
         ],
         null=True,
-        blank=True
+        blank=True,
     )
     four=StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlock()),
-            ("full_richtext",blocks.RichtextBlock()),
+            ("title_and_text",blocks.TitleAndTextBlockAns()),
+            ("full_richtext",blocks.RichtextBlockAns()),
         ],
         null=True,
         blank=True
     )
     five=StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlock()),
-            ("full_richtext",blocks.RichtextBlock()),
+            ("title_and_text",blocks.TitleAndTextBlockAns()),
+            ("full_richtext",blocks.RichtextBlockAns()),
         ],
         null=True,
-        blank=True
+        blank=True,
     )
 
     content_panels=Page.content_panels+[

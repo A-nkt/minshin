@@ -23,14 +23,15 @@ class TitleAndTextBlockAns(blocks.StructBlock):
     class Meta:
         template="streams/title_and_text_block_ans.html"
         icon="edit"
-        label="Title & Text"
+        label="見出し"
 
-class RichtextBlockAns(blocks.RichTextBlock):
-    subtext=blocks.RichTextBlock()
+class RichtextBlockAns(blocks.StructBlock):
+    subject=blocks.RichTextBlock(max_length=1000,blank=True,null=True,help_text="Add about content")
+    links=blocks.CharBlock(max_length=100,blank=True,null=True,help_text="Add about title")
     class Meta:
         template="streams/richtext_block_ans.html"
         icon="edit"
-        label="Full RichText"
+        label="教科リンク"
 
 class NewsTitleBlock(blocks.StructBlock):
     title=blocks.CharBlock(max_length=100,blank=True,null=True,help_text="Add news title")
