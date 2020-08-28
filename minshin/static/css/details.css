@@ -1,0 +1,27 @@
+.details_content{
+  font-size: 16px;
+  padding-right: 15%;
+  padding-left: 15%;
+}
+
+.name{
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+.name,.date{
+  display: inline-block;
+}
+.date{
+  font-size: 14px;
+  opacity: 0.6;
+}
+.message{
+  /*overflow: scroll;*/
+  word-break: break-all;
+}
+
+.comment_class{
+  border:solid 2px gray;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}

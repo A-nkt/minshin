@@ -25,6 +25,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
+    'details',#詳細ページ
     'answer',#大学別過去問解答ページ
     'ans_univ',#大学一覧ページ
     'ans_upload',#過去問アップロードページ

@@ -19,6 +19,7 @@ urlpatterns = [
     url(r'^admin/', include(wagtailadmin_urls)),#wagtailの管理画面
     url(r'^documents/', include(wagtaildocs_urls)),#存在しない模様(2020.08.16)
     url(r'^search/$', search_views.search, name='search'),#検索
+    path('', include('details.urls')),#details app
 ]
 
 if settings.DEBUG:#DEBUGの時
