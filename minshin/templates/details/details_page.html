@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load wagtailcore_tags %}
+{% load widget_tweaks %}
 {% load static %}
 
 
@@ -46,22 +47,47 @@
   <li class="breadcrumb-item active">{{self.title}}</li-->
 </ol>
 
-<div class="details_content">
-  {% for index, row in df.iterrows %}
-    <div class="comment_class">
-      <div class="name">{{row.name}}</div>
-      <div class="date">{{row.date}}</div>
-      <div class="message">{{row.message}}</div>
-    </div>
-  {% endfor%}
+<!--
+1.リプライ機能
+2.参考になった機能
+-->
 
-  <form action method="POST">
-    {% csrf_token %}
-    <table class="contact_form">
-        {{ form}}
-    </table>
-    <div class="job_input_btn"><input type="submit" class="btn btn-primary"></div>
-  </form>
+<div class="details_content">
+  <div class="content_form">
+    {% for index, row in df.iterrows %}
+      {% if row.odd == True %}
+        <div class="comment_class_odd">
+          <div class="name">{{row.name}}</div>
+          <div class="date">{{row.date}}</div>
+          <div class="message">{{row.message}}</div>
+        </div>
+      {% else %}
+      <div class="comment_class_even">
+        <div class="name">{{row.name}}</div>
+        <div class="date">{{row.date}}</div>
+        <div class="message">{{row.message}}</div>
+      </div>
+      {% endif%}
+
+    {% endfor%}
+  </div>
+
+
+  <div class="form_field">
+    <form action method="POST">
+      {% csrf_token %}
+      <table class="details_form">
+          <div class="send_contents_nickname">
+            <div class="send nickname">ニックネーム：</div>
+                {{ form.name |add_class:"form-name" }}<div class="warning_text">{{text}}</div><br>
+          </div>
+          <div class="send comment">コメント：</div>
+          {{ form.message |add_class:"form-message"}}
+      </table>
+      <div class="job_input_btn"><input type="submit" class="btn btn-primary"></div>
+    </form>
+  </div>
+
 </div>
 
 {% endblock %}

@@ -1,7 +1,7 @@
 .details_content{
   font-size: 16px;
-  padding-right: 15%;
-  padding-left: 15%;
+  padding-right: 20%;
+  padding-left: 20%;
 }
 
 .name{
@@ -19,9 +19,50 @@
   /*overflow: scroll;*/
   word-break: break-all;
 }
-
-.comment_class{
-  border:solid 2px gray;
-  border-radius: 10px;
-  margin-bottom: 5px;
+.comment_class_odd .name{
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.comment_class_odd{
+  border:solid 0.1px gray;
+  padding-left: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  /*margin-bottom: 5px;
+  margin-top: 1px;*/
+  background-color: #DDDDDD;
+}
+.comment_class_even .name{
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.comment_class_even{
+  border:solid 0.1px gray;
+  padding-left: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  /*margin-bottom: 5px;
+  margin-top: 1px;*/
+}
+.form_field{
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+.form-message{
+  height: 150px;
+  width:700px;
+}
+.content_form{
+  border:solid 1px black;
+}
+.send_contents_nickname{
+  padding-bottom: 20px;
+}
+.send{
+  padding-bottom: 5px;
+}
+.warning_text{
+  color:red;
 }
