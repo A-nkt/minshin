@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+{% load widget_tweaks %}
+{% load static %}
+
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/details.css' %}">
+{% endblock %}
+
+{% block title %}
+  物理2019 / みんなの院試
+{% endblock %}
+
+
+{% block header_tab %}
+<div class="collapse navbar-collapse" id="navbarColor01">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="/ans_past/">過去問解答検索</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/ans_upload/">解答アップロード</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contact/">お問い合わせ</a>
+    </li>
+    <!--li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li-->
+  </ul>
+  <!--form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+  </form-->
+</div>
+{% endblock %}
+
+{% block content %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/ans_past/">過去問解答検索</a></li>
+  <li class="breadcrumb-item"><a href="/ans_past/nagoya-u">名古屋大学</a></li>
+  <li class="breadcrumb-item active">物理2019</li>
+  <!--li class="breadcrumb-item"><a href="/ans_past/{{self.university_link}}">{{self.university}}</a></li>
+  <li class="breadcrumb-item active">{{self.title}}</li-->
+</ol>
+
+<!--
+1.リプライ機能
+2.参考になった機能
+-->
+
+<div class="details_content">
+  <div class="content_form">
+    {% for index, row in df.iterrows %}
+      {% if row.odd == True %}
+        <div class="comment_class_odd">
+          <div class="name">{{row.name}}</div>
+          <div class="date">{{row.date}}</div>
+          <div class="message">{{row.message}}</div>
+        </div>
+      {% else %}
+      <div class="comment_class_even">
+        <div class="name">{{row.name}}</div>
+        <div class="date">{{row.date}}</div>
+        <div class="message">{{row.message}}</div>
+      </div>
+      {% endif%}
+
+    {% endfor%}
+  </div>
+
+
+  <div class="form_field">
+    <form action method="POST">
+      {% csrf_token %}
+      <table class="details_form">
+          <div class="send_contents_nickname">
+            <div class="send nickname">ニックネーム：</div>
+                {{ form.name |add_class:"form-name" }}<div class="warning_text">{{text}}</div><br>
+          </div>
+          <div class="send comment">コメント：</div>
+          {{ form.message |add_class:"form-message"}}
+      </table>
+      <div class="job_input_btn"><input type="submit" class="btn btn-primary"></div>
+    </form>
+  </div>
+
+</div>
+
+{% endblock %}

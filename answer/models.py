@@ -13,7 +13,7 @@ class AnswerPage(Page):
             ("full_richtext",blocks.RichtextBlockAns()),
         ],
         null=True,
-        blank=True
+        blank=True,
     )
     second=StreamField(
         [
