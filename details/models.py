@@ -13,7 +13,6 @@ from wagtail.contrib.forms.models import (
 )
 #コンテンツモデルと投稿モデルを別個に定義してみる
 #参考になった
-#この解答は、合ってる(8割)、概ね合ってる（6割）、あまり合っていない（４割）、合ってない(４割以下)
 #
 class Comment(models.Model):
     CONFIDENCE = (

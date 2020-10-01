@@ -37,6 +37,10 @@
 </div>
 {% endblock %}
 
+{% block extra_js %}
+    <script type="text/javascript" src="{% static 'js/details.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -49,10 +53,41 @@
 
 <!--
 1.リプライ機能
-2.参考になった機能
+2.参考になった機能ajax
 -->
 
 <div class="details_content">
+  <div class="photo"><img src="{% static 'img/startup-593327_1920.jpg' %}"></div>
+    <div class="nav">
+        <ul>
+            <li><a href="{% static 'img/startup-593327_1920.jpg' %}"><img src="{% static 'img/startup-593327_1920.jpg' %}"></a></li>
+            <li><a href="{% static 'img/writing-1149962_1920.width-3500.jpg' %}"><img src="{% static 'img/writing-1149962_1920.width-3500.jpg' %}"></a></li>
+            <li><a href="{% static 'img/computer-1209641_1920.jpg' %}"><img src="{% static 'img/computer-1209641_1920.jpg' %}"></a></li>
+        </ul>
+    </div>
+  <!--
+  <div id="full">
+    <img src="{% static 'img/computer-1209641_1920.jpg' %}">
+  </div>
+
+    <ul id="thumb">
+      <li><img src="{% static 'img/startup-593327_1920.jpg' %}"></li>
+      <li><img src="{% static 'img/writing-1149962_1920.width-3500.jpg' %}"></li>
+      <li><img src="{% static 'img/computer-1209641_1920.jpg' %}"></li>
+      <li><img src="/img/thumb04.jpg"></li>
+      <li><img src="/img/thumb05.jpg"></li>
+    </ul>
+-->
+  <!--
+  <img src="{% static 'img/computer-1209641_1920.jpg' %}" name="area1">
+
+　<input type="button" onclick="showimg1()" value="画像1">
+　<input type="button" onclick="showimg2()" value="画像2">
+　<input type="button" onclick="showimg3()" value="画像3">
+
+-->
+
+
   <div class="content_form">
     {% for index, row in df.iterrows %}
       {% if row.odd == True %}
