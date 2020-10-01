@@ -59,12 +59,30 @@
         <div class="comment_class_odd">
           <div class="name">{{row.name}}</div>
           <div class="date">{{row.date}}</div>
+          {% if row.rate == '合ってる(8割)' %}
+          <div class="rate rate80">{{row.rate}}</div>
+          {% elif row.rate == '概ね合ってる（6割）' %}
+          <div class="rate rate60">{{row.rate}}</div>
+          {% elif row.rate == 'あまり合っていない（４割）' %}
+          <div class="rate rate40">{{row.rate}}</div>
+          {% elif row.rate == '合ってない(４割以下)' %}
+          <div class="rate rate20">{{row.rate}}</div>
+          {% endif %}
           <div class="message">{{row.message}}</div>
         </div>
       {% else %}
       <div class="comment_class_even">
         <div class="name">{{row.name}}</div>
         <div class="date">{{row.date}}</div>
+        {% if row.rate == '合ってる(8割)' %}
+        <div class="rate rate80">{{row.rate}}</div>
+        {% elif row.rate == '概ね合ってる（6割）' %}
+        <div class="rate rate60">{{row.rate}}</div>
+        {% elif row.rate == 'あまり合っていない（４割）' %}
+        <div class="rate rate40">{{row.rate}}</div>
+        {% elif row.rate == '合ってない(４割以下)' %}
+        <div class="rate rate20">{{row.rate}}</div>
+        {% endif %}
         <div class="message">{{row.message}}</div>
       </div>
       {% endif%}
@@ -83,6 +101,7 @@
           </div>
           <div class="send comment">コメント：</div>
           {{ form.message |add_class:"form-message"}}
+          <div class="send comment">{{ form.rate }}</div>
       </table>
       <div class="job_input_btn"><input type="submit" class="btn btn-primary"></div>
     </form>

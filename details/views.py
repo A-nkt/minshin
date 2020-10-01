@@ -17,7 +17,7 @@ def comment_form(request):
     text=''
     user = str(request.user)
     if request.method == 'POST':#フォームが送信された時
-        if str(user) =='AnonymousUser' and request.POST['name']!='管理人':#ログインしていないユーザーが管理人以外を使用している時
+        if str(user) =='AnonymousUser' and request.POST['name']!='管理人':#ログイン×管理人以外を使用している時
             form = CommentForm(request.POST)#送られたFormを変数に格納
             if form.is_valid():
                 obj = form.save(commit=False)
@@ -36,6 +36,8 @@ def comment_form(request):
                 obj.date = datetime.datetime.now().date()
                 obj.save()
                 return render(request,'details/details_page_landing.html')
+        else:#ユーザーがログインしていて管理人意外
+            form = CommentForm()
     else:#フォームが送信されていない場合
         form = CommentForm()
     data=Comment.objects.all()

@@ -1,0 +1,122 @@
+/*PC*/
+@media screen and (min-width:960px){
+  .comment_class_even{
+    border:solid 0.1px gray;
+    padding-left: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    /*margin-bottom: 5px;
+    margin-top: 1px;*/
+  }
+  .form-message{
+    height: 150px;
+    width:75%;
+  }
+  .comment_class_odd{
+    border:solid 0.1px gray;
+    padding-left: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    /*margin-bottom: 5px;
+    margin-top: 1px;*/
+    background-color: #DDDDDD;
+  }
+  .form-message{
+    height: 150px;
+    width:700px;
+  }
+  .details_content{
+    font-size: 16px;
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+  .rate{
+    font-size: 18px;
+  }
+}
+/*Tablet*/
+@media screen and (max-width:960px){
+  .details_content{
+    font-size: 16px;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  .form-message{
+    height: 150px;
+    width:85%;
+  }
+}
+/*SmartPhone*/
+@media screen and (max-width:560px){
+  .details_content{
+    font-size: 16px;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+}
+
+
+
+
+
+.name{
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+.rate{
+  float: right;
+  padding-top: 10px;
+
+}
+.rate80{
+  color: red;
+}
+.rate60{
+  color: orange;
+}
+.rate40{
+  color: #3399FF;
+}
+.rate20{
+  color: blue;
+}
+.name,.date,.rate{
+  display: inline-block;
+}
+.date{
+  font-size: 14px;
+  opacity: 0.6;
+}
+.message{
+  /*overflow: scroll;*/
+  word-break: break-all;
+}
+.comment_class_odd .name{
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.comment_class_even .name{
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.form_field{
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.content_form{
+  border:solid 1px black;
+}
+.send_contents_nickname{
+  padding-bottom: 20px;
+}
+.send{
+  padding-bottom: 5px;
+}
+.warning_text{
+  color:red;
+}
