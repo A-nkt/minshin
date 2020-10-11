@@ -10,6 +10,7 @@ from streams import blocks
 # Create your models here.
 class RulePage(Page):
     template="rule/rule_page.html"
+    banner_title=models.CharField(max_length=100,blank=False,null=True)
 
     rule_content=StreamField(
         [
@@ -21,5 +22,6 @@ class RulePage(Page):
     )
 
     content_panels=Page.content_panels+[
+        FieldPanel("banner_title"),
         StreamFieldPanel('rule_content'),
     ]
