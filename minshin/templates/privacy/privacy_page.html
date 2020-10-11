@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags %}
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/rule_page.css' %}">
+{% endblock %}
+
+{% block header_tab %}
+<div class="collapse navbar-collapse" id="navbarColor01">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="/ans_past/">過去問解答検索</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/ans_upload/">解答アップロード</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contact/">お問い合わせ</a>
+    </li>
+    <!--li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li-->
+  </ul>
+  <!--form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+  </form-->
+</div>
+{% endblock %}
+
+
+{% block content %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <!--li class="breadcrumb-item"><a href="#">Library</a></li-->
+  <li class="breadcrumb-item active">プライバシーポリシー</li>
+</ol>
+
+
+<div class="rule_content">
+  {% for block in page.rule_content %}
+  {% include_block block %}
+  {% endfor %}
+</div>
+<br>
+
+
+{% endblock %}

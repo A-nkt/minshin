@@ -23,7 +23,7 @@
   }
 
   .footer_list,.footer_list2{
-    display: inline-block;
+    display: inline-table;
     color: white;
     padding-right: 100px;
     padding-left: 100px;
