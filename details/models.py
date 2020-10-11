@@ -28,3 +28,8 @@ class Comment(models.Model):
     rate = models.IntegerField(verbose_name='正答率', choices=CONFIDENCE, default=None)
     univ=models.CharField(blank=True,null=True, max_length=100)
     subject_year=models.CharField(blank=True,null=True, max_length=100)
+
+class Image(models.Model):
+    answer = models.ImageField(upload_to='upload/')
+    univ=models.CharField(blank=True,null=True, max_length=100)
+    subject_year=models.CharField(blank=True,null=True, max_length=100)

@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from .forms import CommentForm
-from .models import Comment
+from .models import Comment,Image
 from django_pandas.io import read_frame
 import datetime
+import pandas as pd
 
 def IntengerChecker(val):#整数を二桁に直す関数
     val=int(val)
@@ -51,9 +52,19 @@ def comment_form(request,univ,subject_and_year):
         else:
             df.loc[i,'odd']=True
     #print(df)
+    #img=Image.objects.all().filter(univ=univ,subject_year=subject_and_year)
+    #img=read_frame(img)
+    #print(img)
+    img="";img2=""
+    if univ=="nagoya-u" and subject_and_year=="physics2019":
+        img="img/startup-593327_1920.jpg"
+        img2="img/startup-593327_1920.jpg"
+
     context={
         'form':form,
         'df':df,
         'text':text,
+        'Img':img,
+        'Img2':img2,
         }
     return render(request, 'details/details_page.html',context)
