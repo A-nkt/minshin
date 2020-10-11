@@ -13,7 +13,7 @@ def IntengerChecker(val):#整数を二桁に直す関数
     return val
 
 # Create your views here.
-def comment_form(request):
+def comment_form(request,univ,subject_and_year):
     text=''
     user = str(request.user)
     if request.method == 'POST':#フォームが送信された時
@@ -21,7 +21,8 @@ def comment_form(request):
             form = CommentForm(request.POST)#送られたFormを変数に格納
             if form.is_valid():
                 obj = form.save(commit=False)
-
+                obj.univ=univ
+                obj.subject_year=subject_and_year
                 obj.date = datetime.datetime.now().date()
                 obj.save()
                 return render(request,'details/details_page_landing.html')
@@ -32,7 +33,8 @@ def comment_form(request):
             form = CommentForm(request.POST)#送られたFormを変数に格納
             if form.is_valid():
                 obj = form.save(commit=False)
-
+                obj.univ=univ
+                obj.subject_year=subject_and_year
                 obj.date = datetime.datetime.now().date()
                 obj.save()
                 return render(request,'details/details_page_landing.html')
@@ -40,7 +42,7 @@ def comment_form(request):
             form = CommentForm()
     else:#フォームが送信されていない場合
         form = CommentForm()
-    data=Comment.objects.all()
+    data=Comment.objects.all().filter(univ=univ,subject_year=subject_and_year)
     df=read_frame(data)
     df=df.reset_index(drop=True)
     for i in range(len(df)):

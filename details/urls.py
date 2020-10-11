@@ -7,5 +7,5 @@ app_name="details"
 
 
 urlpatterns = [
-    path('ans_past/nagoya-u/physics2019/',views.comment_form),
+    path('ans_past/<str:univ>/<str:subject_and_year>/',views.comment_form),
     ]

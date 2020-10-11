@@ -26,3 +26,5 @@ class Comment(models.Model):
     message = models.TextField(max_length=300)
     date = models.DateField(verbose_name='打刻日')
     rate = models.IntegerField(verbose_name='正答率', choices=CONFIDENCE, default=None)
+    univ=models.CharField(blank=True,null=True, max_length=100)
+    subject_year=models.CharField(blank=True,null=True, max_length=100)
