@@ -18,7 +18,8 @@ def IntengerChecker(val):#整数を二桁に直す関数
     return val
 
 # Create your views here.
-def comment_form(request,univ,subject_and_year):
+def comment_form(request,univ,subject,year):
+    subject_and_year=subject+year
     text=''
     user = str(request.user)
     if request.method == 'POST':#フォームが送信された時
@@ -56,14 +57,6 @@ def comment_form(request,univ,subject_and_year):
         else:
             df.loc[i,'odd']=True
     #print(df)
-    """
-    ・GoogleCloudStorageにある画像を引っ張ってきてhtmlに反映させる。
-    https://console.cloud.google.com/storage/browser/minshin/upload?
-    project=applied-primacy-267606&pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&
-    prefix=&forceOnObjectsSortingFiltering=false
-    """
-
-
 
     img_df=read_frame(Image.objects.all().filter(univ=univ,subject_year=subject_and_year))
     img_link=[]
@@ -85,10 +78,20 @@ def comment_form(request,univ,subject_and_year):
         dx.loc[i,'img']='/static/img/'+ig
         i+=1
 
+    if subject == "math":
+        content="数学"+year
+    elif subject == "physics":
+        content="物理"+year
+    elif subject == "chemistry":
+        content="化学"+year
+    else:
+        content=""
+
     context={
         'form':form,
         'df':df,
         'text':text,
         'dx':dx,
+        'content':content,
         }
     return render(request, 'details/details_page.html',context)
