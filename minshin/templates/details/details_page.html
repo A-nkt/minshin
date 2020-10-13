@@ -60,15 +60,13 @@
   <div class="photo"><img src="{% static 'img/startup-593327_1920.jpg' %}"></div>
     <div class="nav">
         <ul>
-            <li><a href="{% static 'img/startup-593327_1920.jpg' %}"><img src="{% static 'img/startup-593327_1920.jpg' %}"></a></li>
+            <!--li><a href="{% static 'img/startup-593327_1920.jpg' %}"><img src="{% static 'img/startup-593327_1920.jpg' %}"></a></li>
             <li><a href="{% static 'img/writing-1149962_1920.width-3500.jpg' %}"><img src="{% static 'img/writing-1149962_1920.width-3500.jpg' %}"></a></li>
-            <li><a href="{% static 'img/computer-1209641_1920.jpg' %}"><img src="{% static 'img/computer-1209641_1920.jpg' %}"></a></li>
-            {% if Img %}
-            <li><a href="{% static Img %}"><img src="{% static Img %}"></a></li>
-            {% endif %}
-            {% if Img2 %}
-            <li><a href="{% static Img2 %}"><img src="{% static Img2 %}"></a></li>
-            {% endif %}
+            <li><a href="{% static 'img/computer-1209641_1920.jpg' %}"><img src="{% static 'img/computer-1209641_1920.jpg' %}"></a></li-->
+            {% for index, row in dx.iterrows %}
+            <li><a href="{{row.img}}"><img src="{{row.img}}"></a></li>
+            <!--li><a href="/static/img/computer-1209641_1920.jpg"><img src="/static/img/computer-1209641_1920.jpg"></a></li-->
+            {% endfor %}
         </ul>
     </div>
 

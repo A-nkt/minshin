@@ -5,7 +5,7 @@ from wagtail.contrib.modeladmin.options import (
     modeladmin_register,
 )
 
-admin.site.register(Comment)
+admin.site.register(Image)
 
 
 # Register your models here.

@@ -7,7 +7,7 @@ from .models import File
 # Register your models here.
 class FileAdmin(ModelAdmin):#wagtailを経由せずに、modelを定義し、管理ページに反映させる
     model = File#modelのクラス
-    menu_label = "解答アップロードファイル"#モデルのlabel
+    menu_label = "解答アップロード"#モデルのlabel
     menu_icon = "download"#icon
     menu_order=290#1~999の整数、メニューの場所を返す。100より小さい場合トップに表示
     add_to_settings_menu=False#menuのサブに入れる場合は、True

@@ -4,6 +4,10 @@ from .models import Comment,Image
 from django_pandas.io import read_frame
 import datetime
 import pandas as pd
+import os
+from google.cloud import storage
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]='My Project 72481-3295e714262b.json'
 
 def IntengerChecker(val):#整数を二桁に直す関数
     val=int(val)
@@ -52,19 +56,39 @@ def comment_form(request,univ,subject_and_year):
         else:
             df.loc[i,'odd']=True
     #print(df)
-    #img=Image.objects.all().filter(univ=univ,subject_year=subject_and_year)
-    #img=read_frame(img)
-    #print(img)
-    img="";img2=""
-    if univ=="nagoya-u" and subject_and_year=="physics2019":
-        img="img/startup-593327_1920.jpg"
-        img2="img/startup-593327_1920.jpg"
+    """
+    ・GoogleCloudStorageにある画像を引っ張ってきてhtmlに反映させる。
+    https://console.cloud.google.com/storage/browser/minshin/upload?
+    project=applied-primacy-267606&pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&
+    prefix=&forceOnObjectsSortingFiltering=false
+    """
+
+
+
+    img_df=read_frame(Image.objects.all().filter(univ=univ,subject_year=subject_and_year))
+    img_link=[]
+    for j in range(len(img_df)):
+        iglink=img_df.loc[j,'answer']
+        iglink=iglink.split('/')[1]
+        img_link.append(iglink)
+
+    dx=pd.DataFrame(columns={'img'});i=0
+    for ig in img_link:
+        object_name='upload/'+ig
+        bucket_name = "minshin"
+
+        outfile = 'minshin/static/img/'+ig
+        client = storage.Client()
+        bucket = client.get_bucket(bucket_name)
+        blob = bucket.blob(object_name)
+        blob.download_to_filename(outfile)
+        dx.loc[i,'img']='/static/img/'+ig
+        i+=1
 
     context={
         'form':form,
         'df':df,
         'text':text,
-        'Img':img,
-        'Img2':img2,
+        'dx':dx,
         }
     return render(request, 'details/details_page.html',context)

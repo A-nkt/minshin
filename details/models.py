@@ -22,14 +22,15 @@ class Comment(models.Model):
             (4, '合ってない(４割以下)'),
         )
 
-    name=models.CharField(blank=True,null=True, max_length=100,help_text="name")
-    message = models.TextField(max_length=300)
-    date = models.DateField(verbose_name='打刻日')
-    rate = models.IntegerField(verbose_name='正答率', choices=CONFIDENCE, default=None)
-    univ=models.CharField(blank=True,null=True, max_length=100)
-    subject_year=models.CharField(blank=True,null=True, max_length=100)
+    name=models.CharField(blank=True,null=True, max_length=100,help_text="name")#投稿者の名前
+    message = models.TextField(max_length=300)#コメント
+    date = models.DateField(verbose_name='打刻日',blank=True,null=True)#日時
+    rate = models.IntegerField(verbose_name='正答率', choices=CONFIDENCE, default=None)#正答率
+    univ=models.CharField(blank=True,null=True, max_length=100)#大学名
+    subject_year=models.CharField(blank=True,null=True, max_length=100)#教科と試験年
 
 class Image(models.Model):
     answer = models.ImageField(upload_to='upload/')
     univ=models.CharField(blank=True,null=True, max_length=100)
     subject_year=models.CharField(blank=True,null=True, max_length=100)
+    post = models.ForeignKey(Comment, verbose_name='投稿', on_delete=models.CASCADE,blank=True,null=True)
