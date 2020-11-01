@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags %}
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/theme.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/news_page.css' %}">
+
+{% endblock %}
+
+{% block header_tab %}
+<div class="collapse navbar-collapse" id="navbarColor01">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="/ans_past/">過去問解答検索</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/ans_upload/">解答アップロード</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="/news/">ニュース</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contact/">お問い合わせ</a>
+    </li>
+    <!--li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li-->
+  </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <!--li class="breadcrumb-item"><a href="#">Library</a></li-->
+  <li class="breadcrumb-item active">ニュース</li>
+</ol>
+
+
+  <section id="news-nav">
+  		<div class="section-wrap">
+  			<ul>
+    				<li class="current"><a href="/news/">ALL</a></li>
+            <li><a href="/news/year/2020/">2020</a></li>
+            <li><a href="/news/year/2021/">2021</a></li>
+
+  			</ul>
+  			<h2>ALL</h2>
+  		</div>
+  	</section>
+
+
+
+
+    <sec id="news" class="archive">
+    		<div class="section-wrap">
+    						<ul class="news-list">
+                  {% for post in posts %}
+                  <li class="news-item">
+                    <a href="{{ post.url }}">
+                      <span class="date">{{post.date}}</span>
+                      <h3>{{ post.title }}</h3>
+                    </a>
+
+                  </li>
+                  {% endfor %}
+    							</ul>
+
+                  <div class="container paninator">
+                    <div class="row">
+                      <div class="col-lg-12">
+
+                        {% if posts.paginator.num_pages > 1 %}
+                        <div class="pagination">
+                          {% if posts.has_previous %}
+                            <li class="page-item">
+                              <a href="?page={{ posts.previous_page_number }}" class="page-link">
+                                <span>&laquo;</span>
+                              </a>
+                            </li>
+                          {% endif %}
+
+                          {% for page_num in posts.paginator.page_range %}
+                          <li class="page-item {% if page_num == posts.number %} active{% endif %}">
+                            <a href="?page={{ page_num }}" class="page-link">
+                              {{ page_num }}
+                            </a>
+                          </li>
+                          {% endfor %}
+
+                          {% if posts.has_next %}
+                            <li class="page-item">
+                              <a href="?page={{ posts.next_page_number }}" class="page-link">
+                                <span>&raquo;</span>
+                              </a>
+                            </li>
+                          {% endif %}
+                        </div>
+                        {% endif %}
+
+                      </div>
+                    </div>
+                  </div>
+    				<div class="pagenavi-wrap">
+    				<div class="wp-pagenavi" role="navigation">
+            <!--span aria-current="page" class="current">1</span>
+            <a class="page larger" title="Page 2" href="https://www.mobercial.com/news/page/2/">2</a>
+            <a class="page larger" title="Page 3" href="https://www.mobercial.com/news/page/3/">3</a>
+            <a class="page larger" title="Page 4" href="https://www.mobercial.com/news/page/4/">4</a>
+            <a class="page larger" title="Page 5" href="https://www.mobercial.com/news/page/5/">5</a>
+            <span class="extend">…</span><a class="nextpostslink" rel="next" href="https://www.mobercial.com/news/page/2/">&gt;</a>
+            <a class="last" href="https://www.mobercial.com/news/page/11/">11</a-->
+            </div>
+            </div>
+    					</div><!-- .section-wrap -->
+    	</sec>
+
+
+
+{% endblock %}

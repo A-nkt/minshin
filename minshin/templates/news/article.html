@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/news_page.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/theme_seconds.css' %}">
+{% endblock %}
+
+{% block header_tab %}
+<div class="collapse navbar-collapse" id="navbarColor01">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="/ans_past/">過去問解答検索</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/ans_upload/">解答アップロード</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="/news/">ニュース</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contact/">お問い合わせ</a>
+    </li>
+    <!--li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li-->
+  </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <!--li class="breadcrumb-item"><a href="#">Library</a></li-->
+  <li class="breadcrumb-item"><a href="/news/">ニュース</a></li>
+  <li class="breadcrumb-item active">{{self.title}}</li>
+</ol>
+
+<section id="main" class="single-blog">
+    <div class="section-wrap" id="article_main">
+      <div class="title">
+        <div class="date">{{self.date}}</div>
+        <h1>{{self.title}}</h1>
+      </div>
+      <div class="contents">
+        <p>
+          {% if self.ヘッダー画像 %}
+            {% image self.ヘッダー画像 max-1280x800 as top_image %}
+              <img src="{{ top_image.url }}" width="1200" height="750"
+              srcset="{{ top_image.url }} 1200w,
+              {{ top_image.url }} 300w,
+               {{ top_image.url }} 1024w,
+                {{ top_image.url }} 768w"
+                 sizes="(max-width: 1200px) 100vw, 1200px"
+              class="img-responsive">
+          {% endif %}
+        </p>
+        {{self.main_text | richtext }}
+
+      </div>
+      <div class="share-nav">
+        <h2><span>SHARE</span></h2>
+        <ul>
+          <li><a class="share-facebook" href="http://www.facebook.com/share.php?u={{ request.scheme }}://{{ request.get_host }}{{self.url}}" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a class="share-twitter" href="http://twitter.com/intent/tweet?text={{self.title}}?&amp;url={{ request.scheme }}://{{ request.get_host }}{{self.url}}" onclick="window.open(encodeURI(decodeURI(this.href)),'tweetwindow','width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=1'); return false;"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}
