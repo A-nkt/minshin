@@ -56,7 +56,10 @@
               class="img-responsive">
           {% endif %}
         </p>
-        {{self.main_text | richtext }}
+        <div class="main_content">
+          {{self.main_text | richtext }}
+        </div>
+
 
       </div>
       <div class="share-nav">
