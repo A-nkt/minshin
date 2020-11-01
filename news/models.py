@@ -62,7 +62,7 @@ class NewsPage(RoutablePageMixin,Page):
 class ArticlePage(NewsPage):
     template="news/article.html"#対応するhtmlファイルを指定
 
-    main_text=RichTextField(_('メインコンテンツ'), max_length=300,blank=True,null=True)
+    main_text=RichTextField(_('メインコンテンツ'), max_length=10000,blank=True,null=True)
     ヘッダー画像=models.ForeignKey(
         "wagtailimages.Image",
         null=True,
