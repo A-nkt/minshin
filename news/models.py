@@ -78,5 +78,5 @@ class ArticlePage(NewsPage):
         FieldPanel("main_text"),
         ImageChooserPanel("ヘッダー画像"),
         #FieldPanel("date"),
-        FieldPanel("year"),
+        #FieldPanel("year"),
     ]
