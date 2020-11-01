@@ -75,8 +75,8 @@ class ArticlePage(NewsPage):
 
 
     content_panels=Page.content_panels + [
-        FieldPanel("main_text"),
         ImageChooserPanel("ヘッダー画像"),
+        FieldPanel("main_text"),
         #FieldPanel("date"),
         #FieldPanel("year"),
     ]
