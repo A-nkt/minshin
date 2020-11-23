@@ -3,8 +3,8 @@
 /*PC*/
 @media screen and (min-width:960px){
   .contents{
-    height: 70% !important;
-    width:70% !important;
+    height: 40% !important;
+    width: 40% !important;
     display: block;
     margin-left: auto;
     margin-right: auto ;
@@ -27,6 +27,13 @@
 }
 /*Tablet*/
 @media screen and (min-width:561px) and (max-width:960px){
+  .contents{
+    height: 70% !important;
+    width: 70% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+  }
   .chart{
     padding-bottom: 100px;
   }
@@ -45,8 +52,17 @@
 }
 /*SmartPhone*/
 @media screen and (max-width:560px){
+  /*.contents{
+    height: 150% !important;
+    width:150% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+  }*/
   .chart{
     padding-bottom: 100px;
+    height: 100% !important;
+    width:100% !important;
   }
   .mokuzi{
     font-size: 22px;

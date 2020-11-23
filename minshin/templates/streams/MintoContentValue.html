@@ -1,7 +1,9 @@
 <div class="chart" id="{{self.RinkID}}">
-<canvas id="{{self.IDname}}"></canvas>
+<canvas id="{{self.IDname}}" style="width: 10px; height: 10px;"></canvas>
+
 <script>
-var ctx = document.getElementById("{{self.IDname}}");
+var ctx = document.getElementById("{{self.IDname}}").getContext('2d');
+
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
@@ -19,21 +21,23 @@ var myPieChart = new Chart(ctx, {
   },
   options: {
     tooltips: {
-      titleFontSize: 24,
-      bodyFontSize: 24,
+      titleFontSize: 20,
+      bodyFontSize: 20,
     },
     title: {
       display: true,
       text: '{{self.research_name}}研究科 点数割合',
-      fontSize: 28,
+      fontSize: 24,
     },
     legend: {
           labels: {
-              fontSize: 24,
+              fontSize: 20,
           }
       },
 
   }
 });
+
 </script>
+
 </div>
