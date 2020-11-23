@@ -5,6 +5,13 @@
 .field{
   padding-bottom: 30px;
 }
+.movie{
+  padding-top: 100px;
+}
+
+.movie iframe{
+  border: 3px solid black;
+}
 /*PC*/
 @media screen and (min-width:960px){
   .contents{
@@ -39,5 +46,8 @@
   }
   .message-detail{
     font-size: 18px;
+  }
+  .movie iframe{
+    width:100%;
   }
 }

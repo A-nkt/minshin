@@ -46,13 +46,13 @@
   <li class="breadcrumb-item"><a href="/my-minto/">わたしのTOEIC</a></li>
 </ol>
 
+
+
 <div class="contents">
 
 <!--
 ここに動画かランディングページを行う！
 -->
-
-
 <div class="forming">
   <form action="{% pageurl page %}" method="POST">
     {% csrf_token %}
@@ -72,6 +72,17 @@
   </form>
 </div>
 
+<div class="movie">
+  <h4>みんなのTOEIC ~使い方解説動画~</h4>
+  <iframe width="500" height="270" src="https://www.youtube.com/embed/ryar_CYIEds?loop=1&autoplay=1"
+  frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+</div>
+
+
+
+
 
 {% endblock %}
