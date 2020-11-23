@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags %}
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/myminto.css' %}">
+{% endblock %}
+
+{% block header_tab %}
+<div class="collapse navbar-collapse" id="navbarColor01">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+        <a class="nav-link active dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">みんなのTOEIC</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/my-minto/">わたしのTOEIC</a>
+          <a class="dropdown-item" href="/minto/">みんなのTOEIC</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+      </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">みんなの過去問</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/ans_past/">過去問解答検索</a>
+          <a class="dropdown-item" href="/ans_upload/">解答アップロード</a>
+        </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/news/">ニュース</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contact/">お問い合わせ</a>
+    </li>
+    <!--li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li-->
+  </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/my-minto/">わたしのTOEIC</a></li>
+</ol>
+
+<div class="contents">
+  <div class="message">
+    <h1>貴重な情報、ありがとうございます。</h1>
+    <h2>フォームの送信が完了しました。</h2>
+    <img src="{% static 'img/thanks_mail.png' %}" alt="">
+      <div class="message-detail">
+        このたびは、フォームの送信をいただき、ありがとうございます。<br>
+        皆様のTOEICが、大学院受験を考える学生の役に立てるように<br>
+        <span style="color:red;">みんなの院試</span>を拡充させていきます！
+      </div>
+  </div>
+</div>
+
+{% endblock %}

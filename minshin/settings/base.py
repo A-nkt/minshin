@@ -25,6 +25,8 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
+    'minto_contact',#みんなのTOEIC投稿ページ
+    'minto',#みんなのTOEIC
     'news',#ニュースページ
     'privacy',#プライバシーポリシー
     'details',#チャットページ

@@ -1,0 +1,40 @@
+.content{
+  text-align: center;
+  color: black;
+}
+.field{
+  padding-bottom: 30px;
+}
+/*PC*/
+@media screen and (min-width:960px){
+  .contents{
+    font-size: 22px;
+    padding-bottom: 30px;
+  }
+  .helptext{
+    font-size: 18px !important;
+    color: gray;
+  }
+}
+/*Tablet*/
+@media screen and (min-width:561px) and (max-width:960px){
+  .contents{
+    font-size: 22px;
+    padding-bottom: 30px;
+  }
+  .helptext{
+    font-size: 18px !important;
+    color: gray;
+  }
+}
+/*SmartPhone*/
+@media screen and (max-width:560px){
+  .contents{
+    font-size: 22px;
+    padding-bottom: 30px;
+  }
+  .helptext{
+    font-size: 18px !important;
+    color: gray;
+  }
+}

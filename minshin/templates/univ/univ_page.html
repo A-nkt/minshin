@@ -5,11 +5,22 @@
 {% block header_tab %}
 <div class="collapse navbar-collapse" id="navbarColor01">
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="/ans_past/">過去問解答検索</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/ans_upload/">解答アップロード</a>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">みんなのTOEIC</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/my-minto/">わたしのTOEIC</a>
+          <a class="dropdown-item" href="/minto/">みんなのTOEIC</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+      </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">みんなの過去問</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/ans_past/">過去問解答検索</a>
+          <a class="dropdown-item" href="/ans_upload/">解答アップロード</a>
+        </div>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/news/">ニュース</a>

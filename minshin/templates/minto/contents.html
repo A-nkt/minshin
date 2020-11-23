@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags %}
+
+{% block css_file %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/minto_contents_page.css' %}">
+
+
+{% endblock %}
+
+{% block header_tab %}
+<div class="collapse navbar-collapse" id="navbarColor01">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+        <a class="nav-link active dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">みんなのTOEIC</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/my-minto/">わたしのTOEIC</a>
+          <a class="dropdown-item" href="/minto/">みんなのTOEIC</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+      </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">みんなの過去問</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/ans_past/">過去問解答検索</a>
+          <a class="dropdown-item" href="/ans_upload/">解答アップロード</a>
+        </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/news/">ニュース</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contact/">お問い合わせ</a>
+    </li>
+    <!--li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li-->
+  </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/minto/">みんなのTOEIC</a></li>
+  <li class="breadcrumb-item"><a href="/minto/{{self.slug}}/">{{self.title}}</a></li>
+</ol>
+
+<div class="mokuzi">
+  <ul>
+    <p>INDEX</p>
+    {% for block in page.INDEX %}
+			{% include_block block %}
+		{% endfor %}
+  </ul>
+</div>
+
+
+
+
+  {% block extra_js %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+      <script type="text/javascript" src="{% static 'js/minto_contents.js' %}"></script>
+  {% endblock %}
+<div class ="contents">
+
+  {% for block in page.VALUE %}
+    {% include_block block %}
+  {% endfor %}
+
+
+
+</div>
+{% endblock %}

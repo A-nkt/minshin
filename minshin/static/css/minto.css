@@ -1,0 +1,39 @@
+.contents img{
+  width: 250px;
+  border: 3px solid white;
+}
+#univ{
+  margin-bottom: 20px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+
+
+/*PC*/
+@media screen and (min-width:960px){
+  .contents{
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  .__shi_h_mt_5{
+    font-size: 16px;
+  }
+}
+/*Tablet*/
+@media screen and (min-width:561px) and (max-width:960px){
+  .__shi_h_mb, .__shi_m_heading_primary{
+    width:100% !important;
+  }
+  .__shi_l_fix_580{
+    width:100% !important;
+  }
+}
+/*SmartPhone*/
+@media screen and (max-width:560px){
+  .__shi_h_mb, .__shi_m_heading_primary{
+    width:100% !important;
+  }
+  .__shi_l_fix_580{
+    width:100% !important;
+  }
+}
