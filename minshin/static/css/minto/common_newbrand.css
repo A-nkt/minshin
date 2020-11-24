@@ -4272,7 +4272,8 @@ a.__btnPamph_small.__disabled span {
 /* Layouts
 ------------------------------------------------*/
 
-.__shi_l_fix_580 {width: 580px;}
+/*.__shi_l_fix_580 {width: 680px;}*/
+.__shi_l_fix_580{width: 60%;}
 .__shi_l_fix_530 {width: 530px;}
 .__shi_l_fix_500 {width: 500px;}
 .__shi_l_fix_480 {width: 480px;}
