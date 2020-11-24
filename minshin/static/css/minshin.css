@@ -325,6 +325,7 @@ padding-left: 15px;
 */
 #news_fields{
   margin-left: 9vw;
+  list-style: none;
 }
 
 .img_content{
