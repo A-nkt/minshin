@@ -48,6 +48,9 @@
     font-size: 18px;
   }
   .movie iframe{
-    width:100%;
+    width:90%;
+  }
+  .forming{
+    font-size: 20px;
   }
 }
