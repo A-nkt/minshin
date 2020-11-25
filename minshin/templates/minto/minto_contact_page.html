@@ -59,8 +59,14 @@
     <table class="contact_form">
       {% for field in form %}
        <div class="field">
-           {{ field.label_tag }}：
-           {{ field }}
+         {% if field.label_tag|length >= 100%}
+          <div class="fontsize">{{ field.label_tag }}<br>
+          {{ field }}</div>
+         {% else %}
+         {{ field.label_tag }}：
+         {{ field }}
+         {% endif %}
+
            {% if field.help_text %}
               <br><span class="helptext">{{ field.help_text }}</span>
            {% endif %}

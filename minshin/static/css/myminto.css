@@ -1,6 +1,11 @@
 .content{
   text-align: center;
+	display: block;
   color: black;
+}
+.forming{
+  text-align: left;
+	display: inline-block;
 }
 .field{
   padding-bottom: 30px;
@@ -21,6 +26,12 @@
   .helptext{
     font-size: 18px !important;
     color: gray;
+  }
+  .field{
+    font-size: 18px;
+  }
+  .fontsize{
+    font-size: 16px;
   }
 }
 /*Tablet*/

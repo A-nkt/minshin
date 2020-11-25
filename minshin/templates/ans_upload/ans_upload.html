@@ -55,20 +55,23 @@
   <li class="breadcrumb-item active">解答アップロード</li>
 </ol>
 
-<div class="content_upload">
-<h1>解答アップロード</h1>
-<p>解答をアップロードしてください。</p>
-    <form method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
-      <table>
-          {{ form.as_table}}
-      </table>
+<div class="content">
+  <div class="content_upload">
+  <h1>解答アップロード</h1>
+  <p>解答をアップロードしてください。</p>
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table}}
+        </table>
 
-      <input type="checkbox"  name="chkbox01" value="1" required>
-      <p><a target="_blank" href="/rule">利用規約</a>に同意し、解答の掲載を許可する</p>
-      <div class="upload_btn"><input type="submit" class="btn btn-primary"></div>
-    </form>
+        <input type="checkbox"  name="chkbox01" value="1" required>
+        <p><a target="_blank" href="/rule">利用規約</a>に同意し、解答の掲載を許可する</p>
+        <div class="upload_btn"><input type="submit" class="btn btn-primary"></div>
+      </form>
+  </div>
 </div>
+
 
 
 {% endblock %}
