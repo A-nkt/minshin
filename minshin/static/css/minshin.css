@@ -21,6 +21,9 @@
   margin: 0px;
   background-color: red;
 }
+.mask:hover{
+  border: 5px solid silver!important;
+}
 .toeic-exam h2{
   float: left;
   font-family:'Times New Roman';
@@ -53,10 +56,14 @@
     margin-bottom: 60px;
   }
   .toeic-exam img{
-    width:30em;
-    height:25em;
+    width:25vw;
+    height:20vw;
     /*margin: 20px;*/
   }
+  .top-text p{
+    font-size:16px;
+  }
+
 
   /*---Start--footer------*/
   .link{
@@ -217,6 +224,9 @@ padding-left: 15px;
     width:20em;
     height:15em;
     /*margin: 20px;*/
+  }
+  .top-text p{
+    font-size:15px;
   }
   .link{
     font-size: 18px;
@@ -380,6 +390,12 @@ padding-left: 15px;
     height:20em;
     margin: 20px;
 
+  }
+  .img-group{
+    margin-left: 12%;
+  }
+  .top-text p{
+    font-size:15px;
   }
 
 #news_fields{
