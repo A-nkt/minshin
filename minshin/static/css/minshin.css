@@ -103,7 +103,8 @@ body,
   bottom: 0;
   left: 0;
   margin:1% auto;
-  font-size: 1vw;
+  font-size: 0.8vw;
+  width:30vw;
 }
 li p{
   margin-top:20px;
