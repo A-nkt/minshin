@@ -54,6 +54,9 @@
       <div class="title">
         <div class="date">{{self.date}}</div>
         <h1>{{self.title}}</h1>
+        {% for tag in self.tags.all %}
+          <div class="tag"><a href="/news/?tag={{ tag }}">{{ tag }}</a></div>
+        {% endfor %}
       </div>
       <div class="contents">
         <p>

@@ -810,9 +810,7 @@ img {max-width: 100%;height: auto;vertical-align: bottom;}
 	text-indent: .05em;
 	letter-spacing: .05em;
 	line-height: 1.75;
-	border-bottom: 1px solid #ddd;
-	padding-bottom: 1em;
-	margin-bottom: 1.25em;
+	
 }
 #main .main-contents {
 	font-size: 15px;

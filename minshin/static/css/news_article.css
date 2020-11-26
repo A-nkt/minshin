@@ -4,3 +4,9 @@
 .main_content p{
   padding-top: 1.5px;
 }
+.title{
+  padding-bottom: 3em;
+  margin-bottom: 1.25em;
+  border-bottom: 1px solid #ddd;
+}
+.title
