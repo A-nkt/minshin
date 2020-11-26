@@ -45,7 +45,7 @@
 /*PC*/
 @media screen and (min-width:960px){
   .caption{
-    font-size: 1.5vw!important;
+    font-size: 1.25vw!important;
   }
   .toeic-exam {
     text-align:center;
