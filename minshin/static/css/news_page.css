@@ -70,4 +70,19 @@ li{
   .news-content{
     margin-top: 60px;
   }
+  .news-item h3{
+    font-size: 18px;
+  }
+  .news-list{
+    padding: 0px;
+    margin: 0px;
+  }
+  #news-nav{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  #news{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
 }
