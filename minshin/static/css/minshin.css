@@ -376,14 +376,17 @@ padding-left: 15px;
 @media screen and (max-width:560px){
   .toeic-exam {
     text-align:center;
-    margin-right: 1%;
-    margin-left: 1%;
     border: 2px solid #4682b4; /*線の太さ・色*/
     background-color: #fff; /*背景色*/
     box-shadow: -2px 5px 5px #e8d3c7; /*影*/
     border-radius: 20px; /*角の丸み*/
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 5px;
     margin-bottom: 60px;
+    margin-right: 5%;
+    margin-left: 5%;
   }
   .toeic-exam img{
     width:25em;
@@ -391,8 +394,12 @@ padding-left: 15px;
     margin: 20px;
 
   }
-  .img-group{
+  /*.img-group{
     margin-left: 12%;
+  }
+  */
+  .toeic-exam img{
+    margin-left: 20%;
   }
   .top-text p{
     font-size:15px;
