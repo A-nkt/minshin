@@ -44,6 +44,9 @@
 
 /*PC*/
 @media screen and (min-width:960px){
+  .caption{
+    font-size: 1.5vw!important;
+  }
   .toeic-exam {
     text-align:center;
     margin-right: 23.5em;
