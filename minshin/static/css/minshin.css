@@ -385,17 +385,18 @@ padding-left: 15px;
     padding-right: 30px;
     /*padding-left: 5px;*/
     margin-bottom: 60px;
-    /*padding-right: 5%;
-    padding-left: 5%;*/
     margin-right: 3%;
     margin-left: 3%;
   }
   .toeic-exam img{
     width:25em;
     height:20em;
-    margin: 20px;
-    margin-left: 80px;
-
+    margin-left: 65px;
+    /*margin: 20px;
+    margin-left: 80px;*/
+  }
+  .gazo-box1 img{
+    margin-bottom: 30px;
   }
   /*.img-group{
     margin-left: 12%;
