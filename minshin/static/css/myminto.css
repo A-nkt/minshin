@@ -48,7 +48,7 @@
 /*SmartPhone*/
 @media screen and (max-width:560px){
   .contents{
-    font-size: 22px;
+    font-size: 14px!important;
     padding-bottom: 30px;
   }
   .helptext{
@@ -61,7 +61,10 @@
   .movie iframe{
     width:90%;
   }
-  .forming{
-    font-size: 20px;
+  .movie h4{
+    font-size: 14px;
   }
+  /*.forming{
+    font-size: 20px;
+  }*/
 }
