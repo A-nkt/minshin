@@ -7,12 +7,37 @@
 .news-item .date{
   color: silver;
 }
+li{
+  list-style: none;
+}
 .news-item h3{
   border-bottom: solid 1px silver;
   padding-left: 30px;
 }
 .news-item{
   text-align:left;
+}
+.tag {
+  float: left;
+  margin: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-right: 10px;
+  border: 1px solid silver;
+  text-align: center;
+  border-radius: 8px;
+}
+.tag a{
+  text-decoration: none;
+}
+.tag:hover{
+  background-color: silver;
+  border: 1px solid black;
+}
+.my-list{
+  text-align: center;
 }
 
 #article_main{
@@ -24,16 +49,25 @@
   .main_content{
     font-size: 18px;
   }
+  .news-content{
+    margin-top: 30px;
+  }
 }
 /*Tablet*/
 @media screen and (min-width:561px) and (max-width:960px){
   .main_content{
     font-size: 16px;
   }
+  .news-content{
+    margin-top: 40px;
+  }
 }
 /*SmartPhone*/
 @media screen and (max-width:560px){
   .main_content{
     font-size: 14px;
+  }
+  .news-content{
+    margin-top: 60px;
   }
 }

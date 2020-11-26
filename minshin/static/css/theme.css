@@ -122,10 +122,10 @@ img {max-width: 100%;height: auto;vertical-align: bottom;}
 	margin: auto;
 }
 #news.archive .section-wrap .news-list li {
-	border-bottom: 1px solid #ddd;
+	/*border-bottom: 1px solid #ddd;*/
 	font-size: 15px;
-	margin-bottom: 2em;
-	padding-bottom: 2em;
+	/*margin-bottom: 2em;
+	padding-bottom: 0em;*/
 }
 #news.archive .section-wrap .news-list li a {
 	display: block;

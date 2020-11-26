@@ -1,6 +1,8 @@
 from django.db import models
 from django.shortcuts import render
+from taggit.models import TaggedItemBase
 from modelcluster.fields import ParentalKey
+from modelcluster.contrib.taggit import ClusterTaggableManager
 from wagtail.core.models import Page
 from wagtail.admin.edit_handlers import FieldPanel,StreamFieldPanel,MultiFieldPanel
 from wagtail.core.fields import RichTextField
@@ -32,7 +34,14 @@ class NewsPage(RoutablePageMixin,Page):
     def get_context(self, request, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
         all_posts=ArticlePage.objects.live().public().order_by('-first_published_at')
-        paginator=Paginator(all_posts,5)
+
+        if request.GET.get('tag',None):
+            tags=request.GET.get('tag')
+            all_posts=all_posts.filter(tags__name=tags)
+        else:
+            tags=""
+
+        paginator=Paginator(all_posts,10)
 
         page = request.GET.get("page")
         try:
@@ -41,9 +50,9 @@ class NewsPage(RoutablePageMixin,Page):
             posts=paginator.page(1)
         except EmptyPage:
             posts=paginator.page(paginator.num_pages)
-        context["posts"] =posts
-        context["categories"] =ArticlePage.objects.all()
 
+        context["posts"] =posts
+        context["tags"] =tags
 
         return context
 
@@ -57,6 +66,15 @@ class NewsPage(RoutablePageMixin,Page):
         }
 
         return render(request,"news/related.html",context)
+
+
+class PageTag(TaggedItemBase):
+    content_object = ParentalKey(
+        'ArticlePage',
+        related_name='tagged_items',
+        on_delete=models.CASCADE,
+    )
+
 
 
 class ArticlePage(NewsPage):
@@ -73,10 +91,12 @@ class ArticlePage(NewsPage):
     date=models.DateField(null=True,default=datetime.date.today)
     year=models.IntegerField(default=datetime.datetime.now().year)
 
+    tags = ClusterTaggableManager(through=PageTag,blank=True)
 
     content_panels=Page.content_panels + [
         ImageChooserPanel("ヘッダー画像"),
         FieldPanel("main_text"),
+        FieldPanel("tags"),
         #FieldPanel("date"),
         #FieldPanel("year"),
     ]
