@@ -22,7 +22,7 @@
   background-color: red;
 }
 .mask:hover{
-  border: 5px solid silver!important;
+  border: 8px solid silver!important;
 }
 .toeic-exam h2{
   float: left;
@@ -386,21 +386,27 @@ padding-left: 15px;
     border-radius: 20px; /*角の丸み*/
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-right: 30px;
+    /*padding-right: 30px;*/
     /*padding-left: 5px;*/
     margin-bottom: 60px;
     margin-right: 3%;
     margin-left: 3%;
   }
   .toeic-exam img{
-    width:25em;
-    height:20em;
-    margin-left: 65px;
+    width:12em;
+    height:10em;
+
     /*margin: 20px;
     margin-left: 80px;*/
   }
+  .img-group{
+    margin-left: 50px;
+  }
   .gazo-box1 img{
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
+  }
+  .gazo-box2 img{
+    margin-left: 60px;
   }
   /*.img-group{
     margin-left: 12%;
@@ -411,7 +417,7 @@ padding-left: 15px;
   }
 
 #news_fields{
-  margin-left: 9vw;
+  margin-left: 1em;
   list-style: none;
 }
 
@@ -515,13 +521,17 @@ padding-left: 0px;
   padding-left: 20px !important;*/
   /*width:400px;
   height:350px;*/
+  position: relative;
 	overflow:		hidden;
 	margin:			10px 8px 10px -60px;
 	position:		relative;	/* 相対位置指定 */
 }
 .caption{
-  font-size: 24px;
+  font-size: 15px;
+  font-family:'arial unicode ms';
+  color:black;
 }
+/*
 .gazo-box1 .caption,.gazo-box2 .caption {
 	position:absolute;
   top:50%;
@@ -533,21 +543,34 @@ padding-left: 0px;
   padding: 0;
   color: white;
   font-size: 150%;
+}*/
+
+.gazo-box1 .mask {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
 }
-.gazo-box1 .mask,.gazo-box2 .mask {
-	width: 99%;
-	height:			100%;
-	position:		absolute;	/* 絶対位置指定 */
-	top:			0;
-	left:			0;
-	opacity:		0;	/* マスクを表示しない */
-	background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
-	-webkit-transition:	all 0.2s ease;
-	transition:		all 0.2s ease;
+.gazo-box2 .mask{
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
 }
+/*
 .gazo-box1:hover .mask,.gazo-box2:hover .mask {
-	opacity:		1;	/* マスクを表示する */
+	opacity:		1;
 }
+*/
+
 
 
 .content{
