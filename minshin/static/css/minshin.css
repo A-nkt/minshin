@@ -39,7 +39,7 @@
   margin-top: 50px;
 }
 .second2{
-  border: 2px solid #009900; /*線の太さ・色*/
+  border: 2px solid #009900;
 }
 
 /*PC*/
@@ -51,24 +51,22 @@
     text-align:center;
     margin-right: 23.5em;
     margin-left: 23.5em;
-    border: 2px solid #4682b4; /*線の太さ・色*/
-    background-color: #fff; /*背景色*/
-    box-shadow: -2px 5px 5px #e8d3c7; /*影*/
-    border-radius: 20px; /*角の丸み*/
-    padding: 30px;
+    border: 2px solid #4682b4;
+    background-color: #fff;
+    box-shadow: -2px 5px 5px #e8d3c7;
+    border-radius: 20px;
+    padding: 25px;
     margin-bottom: 60px;
   }
   .toeic-exam img{
     width:25vw;
     height:20vw;
-    /*margin: 20px;*/
   }
   .top-text p{
     font-size:16px;
   }
 
 
-  /*---Start--footer------*/
   .link{
     font-size: 18px;
     padding: 2px;
@@ -89,7 +87,6 @@
   .footer_list a,.footer_list2 a{
     color: silver;
   }
-    /*---Finish--footer------*/
   .img_content{
     margin-left:12%;
     margin-right: 8%;
@@ -131,17 +128,11 @@ li {
 
 .footer {
 margin-top: auto;
-/*position: absolute;
-float: left;
-bottom: -200px;
-width: 100%;
-height: 130px;*/
 background-color: black!important;
 }
 body > .container {
 padding: 60px 15px 0;
 }
-/*.container*/
 .text-muted {
 margin: 20px 0;
 color:white!important;
@@ -167,14 +158,9 @@ padding-left: 15px;
   height:25em;
 }
 .gazo-box1,.gazo-box2 {
-  /*float: left !important;*/
   display:inline-block;
-  /*padding-right: 4px !important;*/
-  /*width:400px;
-  height:350px;*/
 	overflow:		hidden;
-	/*margin:			10px 36px 10px 16px;*/
-	position:		relative;	/* 相対位置指定 */
+	position:		relative;
 }
 .caption{
   font-size: 24px;
@@ -194,16 +180,16 @@ padding-left: 15px;
 .gazo-box1 .mask,.gazo-box2 .mask {
 	width: 100%;
 	height:			100%;
-	position:		absolute;	/* 絶対位置指定 */
+	position:		absolute;
 	top:			0;
 	left:			0;
-	opacity:		0;	/* マスクを表示しない */
-	background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
+	opacity:		0;
+	background-color:	rgba(0,0,0,0.4);
 	-webkit-transition:	all 0.2s ease;
 	transition:		all 0.2s ease;
 }
 .gazo-box1:hover .mask,.gazo-box2:hover .mask {
-	opacity:		1;	/* マスクを表示する */
+	opacity:		1;
 }
 
 
@@ -217,17 +203,16 @@ padding-left: 15px;
     text-align:center;
     margin-right: 2.5%;
     margin-left: 2.5%;
-    border: 2px solid #4682b4; /*線の太さ・色*/
-    background-color: #fff; /*背景色*/
-    box-shadow: -2px 5px 5px #e8d3c7; /*影*/
-    border-radius: 20px; /*角の丸み*/
+    border: 2px solid #4682b4;
+    background-color: #fff;
+    box-shadow: -2px 5px 5px #e8d3c7;
+    border-radius: 20px;
     padding: 30px;
     margin-bottom: 60px;
   }
   .toeic-exam img{
     width:20em;
     height:15em;
-    /*margin: 20px;*/
   }
   .top-text p{
     font-size:15px;
@@ -292,12 +277,6 @@ li {
 .footer {
 margin:auto;
 width: 100%;
-  /*
-position: absolute;
-float: left;
-bottom: -50px;
-
-/* Set the fixed height of the footer here */
 height: 250px;
 background-color: black!important;
 padding-bottom: 500px;
@@ -333,11 +312,9 @@ padding-left: 15px;
   height:25vw;
 }
 .gazo-box1,.gazo-box2 {
-  /*width:400px;
-  height:350px;*/
 	overflow:		hidden;
 	margin:			10px 36px 10px 16px;
-	position:		relative;	/* 相対位置指定 */
+	position:		relative;
 }
 .caption{
   font-size: 24px;
@@ -359,16 +336,16 @@ padding-left: 15px;
 .gazo-box1 .mask,.gazo-box2 .mask {
 	width: 99%;
 	height:			100%;
-	position:		absolute;	/* 絶対位置指定 */
+	position:		absolute;
 	top:			0;
 	left:			0;
-	opacity:		0;	/* マスクを表示しない */
-	background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
+	opacity:		0;
+	background-color:	rgba(0,0,0,0.4);
 	-webkit-transition:	all 0.2s ease;
 	transition:		all 0.2s ease;
 }
 .gazo-box1:hover .mask,.gazo-box2:hover .mask {
-	opacity:		1;	/* マスクを表示する */
+	opacity:		1;
 }
 
 
@@ -380,14 +357,12 @@ padding-left: 15px;
 @media screen and (max-width:560px){
   .toeic-exam {
     text-align:center;
-    border: 2px solid #4682b4; /*線の太さ・色*/
-    background-color: #fff; /*背景色*/
-    box-shadow: -2px 5px 5px #e8d3c7; /*影*/
-    border-radius: 20px; /*角の丸み*/
+    border: 2px solid #4682b4;
+    background-color: #fff;
+    box-shadow: -2px 5px 5px #e8d3c7;
+    border-radius: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
-    /*padding-right: 30px;*/
-    /*padding-left: 5px;*/
     margin-bottom: 60px;
     margin-right: 3%;
     margin-left: 3%;
@@ -395,23 +370,15 @@ padding-left: 15px;
   .toeic-exam img{
     width:12em;
     height:10em;
-
-    /*margin: 20px;
-    margin-left: 80px;*/
   }
   .img-group{
     margin-left: 50px;
   }
   .gazo-box1 img{
-    /*margin-bottom: 30px;*/
   }
   .gazo-box2 img{
     margin-left: 60px;
   }
-  /*.img-group{
-    margin-left: 12%;
-  }
-  */
   .top-text p{
     font-size:15px;
   }
@@ -422,7 +389,6 @@ padding-left: 15px;
 }
 
 .img_content{
-  /*margin-left: 80px;*/
 }
 .footer_list{
   padding-bottom: 20px;
@@ -442,7 +408,6 @@ padding-left: 15px;
     text-align: center;
   }
   .footer_children .link, .footer_children2 .link{
-    /*display: inline-block;*/
   }
   .footer_list,.footer_list2{
     display:inline-table;
@@ -460,7 +425,6 @@ padding-left: 15px;
   padding-bottom: 150px;
   }
   .footer_children2 .link{
-    /*background-color:red;*/
     }
   .footer_list,.footer_list2{
     color: white;
@@ -488,7 +452,7 @@ body,#wrapper {
 body > .container {
 padding: 10px 15px 0;
 }
-/*.container*/
+
 .text-muted {
 margin: 20px 0;
 color:white!important;
@@ -511,39 +475,19 @@ padding-left: 0px;
 }
 
 
-.figure_img{
-  /*width:85vw;
-  height:70vw;*/
-}
 
 .gazo-box1,.gazo-box2 {
-  /*float: left !important;
-  padding-left: 20px !important;*/
-  /*width:400px;
-  height:350px;*/
   position: relative;
 	overflow:		hidden;
 	margin:			10px 8px 10px -60px;
-	position:		relative;	/* 相対位置指定 */
+	position:		relative;
 }
 .caption{
   font-size: 15px;
   font-family:'arial unicode ms';
   color:black;
 }
-/*
-.gazo-box1 .caption,.gazo-box2 .caption {
-	position:absolute;
-  top:50%;
-  left:50%;
-  -ms-transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  transform:translate(-50%,-50%);
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-size: 150%;
-}*/
+
 
 .gazo-box1 .mask {
   position: absolute;
@@ -565,13 +509,6 @@ padding-left: 0px;
   margin:0;
   padding:0;
 }
-/*
-.gazo-box1:hover .mask,.gazo-box2:hover .mask {
-	opacity:		1;
-}
-*/
-
-
 
 .content{
   font-size: 12px !important;
