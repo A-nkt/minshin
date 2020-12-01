@@ -11,7 +11,7 @@ admin.site.register(Image)
 # Register your models here.
 class FileAdmin(ModelAdmin):#wagtailを経由せずに、modelを定義し、管理ページに反映させる
     model = Image#modelのクラス
-    menu_label = "アップロードImage"#モデルのlabel
+    menu_label = "掲載済み解答"#モデルのlabel
     menu_icon = "snippet"#icon
     menu_order=200#1~999の整数、メニューの場所を返す。100より小さい場合トップに表示
     add_to_settings_menu=False#menuのサブに入れる場合は、True

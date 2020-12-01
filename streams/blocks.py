@@ -69,7 +69,7 @@ class RuleDate(blocks.StructBlock):
 class MintoUniversity(blocks.StructBlock):
     name = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="大学名")
     sub = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="区分/地名")
-    link = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="大学名のリンク")
+    link = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="大学名のリンク -uは不要")
     text = blocks.TextBlock(require=True)
     images = ImageChooserBlock(label=_("Image"))
 
@@ -87,8 +87,8 @@ class MintoUnivResearch(blocks.StructBlock):
         label = "研究科名"
 
 class MintoContentIndex(blocks.StructBlock):
-    name = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="大学名")
-    link = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="大学名のリンク")
+    name = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="研究科名",default="研究科")
+    link = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="研究科名のURL")
 
     class Meta:
         template = "streams/MintoContentIndex.html"
@@ -97,7 +97,7 @@ class MintoContentIndex(blocks.StructBlock):
 
 class MintoContentValue(blocks.StructBlock):
     research_name = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="研究科名")
-    IDname = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="IDname")
+    IDname = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="IDname",default="Chart")
     RinkID = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="RinkID")
     int1 = blocks.IntegerBlock(blank=True,null=True,help_text="500~600点")
     int2 = blocks.IntegerBlock(blank=True,null=True,help_text="600~700点")
