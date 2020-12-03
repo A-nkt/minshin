@@ -1,15 +1,15 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
+# みんなの過去問、解答アップロードフォームページ
 class File(models.Model):
-    date= models.DateTimeField(default=timezone.now)
-    title = models.CharField(verbose_name='大学名',help_text='<p></p>',max_length=200)
-    subtitle = models.CharField(verbose_name='研究科名',help_text='<p></p>', max_length=100,null=True)
-    subfield = models.CharField(verbose_name='専攻以下',help_text='<p>できるだけ正確に記入してください</p>', max_length=100,null=True)
-    subject = models.CharField(verbose_name='教科等',help_text='<p></p>', max_length=100,null=True)
-    year=models.IntegerField(verbose_name='年度',help_text='<p>解答した年を入力してください<br>(例)2020年入学者用問題→2019年</p>',default=2019)
-    file = models.FileField(verbose_name='過去問解答',help_text='<p>png,jpeg,svg,bmp</p>',upload_to='past/')
+    date= models.DateTimeField(default=timezone.now) #投稿日
+    title = models.CharField(verbose_name='大学名',help_text='<p></p>',max_length=200) #大学名
+    subtitle = models.CharField(verbose_name='研究科名',help_text='<p></p>', max_length=100,null=True) #研究科名
+    subfield = models.CharField(verbose_name='専攻以下',help_text='<p>できるだけ正確に記入してください</p>', max_length=100,null=True) #専攻
+    subject = models.CharField(verbose_name='教科等',help_text='<p></p>', max_length=100,null=True) #教科
+    year=models.IntegerField(verbose_name='年度',help_text='<p>解答した年を入力してください<br>(例)2020年入学者用問題→2019年</p>',default=2019) #過去問年度
+    file = models.FileField(verbose_name='過去問解答',help_text='<p>png,jpeg,svg,bmp</p>',upload_to='past/') #解答データ
 
 
     def __str__(self):

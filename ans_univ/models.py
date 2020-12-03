@@ -1,11 +1,10 @@
 from django.db import models
-
 from wagtail.admin.edit_handlers import FieldPanel,StreamFieldPanel
 from wagtail.core.models import Page
-from wagtail.core.fields import RichTextField
 from wagtail.core.fields import StreamField
 from streams import blocks
-# Create your models here.
+
+#みんなの過去問大学一覧ページ
 class Ans_univPage(Page):
     template="ans_univ/ans_univ_page.html"
 

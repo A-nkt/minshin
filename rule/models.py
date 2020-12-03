@@ -7,19 +7,19 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.core.fields import StreamField
 from streams import blocks
 
-# Create your models here.
+# 規約ページ
 class RulePage(Page):
-    template="rule/rule_page.html"
+    template = "rule/rule_page.html"
 
-    rule_content=StreamField(
+    rule_content = StreamField(
         [
             ("title",blocks.RuleTitleBlock()),
             ("date",blocks.RuleDate()),
         ],
-        null=True,
-        blank=True,
+        null = True,
+        blank = True,
     )
 
-    content_panels=Page.content_panels+[
+    content_panels = Page.content_panels+[
         StreamFieldPanel('rule_content'),
     ]

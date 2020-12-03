@@ -4,7 +4,7 @@ from wagtail.admin.edit_handlers import FieldPanel,StreamFieldPanel
 from wagtail.core.models import Page
 from wagtail.core.fields import StreamField
 from streams import blocks
-# Create your models here.
+# 各大学の5年分が対象となる
 class AnswerPage(Page):
     template="answer/answer_page.html"
     first=StreamField(
