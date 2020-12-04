@@ -20,6 +20,7 @@ class Comment(models.Model):
             (2, '概ね合ってる（6割）'),
             (3, 'あまり合っていない（４割）'),
             (4, '合ってない(４割以下)'),
+            (5, 'その他・コメント'),
         )
 
     name = models.CharField(blank = True,null = True, max_length = 100,help_text = "name")#投稿者の名前
