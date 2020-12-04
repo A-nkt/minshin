@@ -38,6 +38,9 @@
   .photo img {
     width: 700px !important;
     height: auto !important;  /* ←縦横比を維持する高さを自動計算 */
+    display: block !important;
+    margin-left: auto;  /* 【ポイント】*/
+  margin-right: auto; /* 【ポイント】*/
   }
 }
 /*Tablet*/
