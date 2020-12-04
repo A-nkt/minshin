@@ -35,6 +35,10 @@
   .rate{
     font-size: 18px;
   }
+  .photo img {
+    width: 700px !important;
+    height: auto !important;  /* ←縦横比を維持する高さを自動計算 */
+  }
 }
 /*Tablet*/
 @media screen and (max-width:960px){

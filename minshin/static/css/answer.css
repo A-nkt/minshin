@@ -20,4 +20,7 @@
 }
 /*SmartPhone*/
 @media screen and (max-width:560px){
+  .answer_content{
+    margin-bottom: 100px;
+  }
 }
