@@ -44,6 +44,14 @@
 
 /*PC*/
 @media screen and (min-width:960px){
+  #right-tab{
+  　padding: 16px;
+  　color: white;
+  　transition: background 1s;
+  }
+  #right-tab:hover{
+    background: silver;
+  }
   .caption{
     font-size: 1.25vw!important;
   }
