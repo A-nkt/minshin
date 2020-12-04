@@ -84,8 +84,33 @@ def comment_form(request,univ,subject,year):
         content="物理"+year
     elif subject == "chemistry":
         content="化学"+year
+    elif subject == "condensed_matter_physics":
+        content = "物性物理学" + year
     else:
         content=""
+
+    if univ == "nagoya-u":
+        univ_name = "名古屋大学"
+    elif univ == "tokyo-u":
+        univ_name = "東京大学"
+    elif univ == "hokkaido-u":
+        univ_name = "北海道大学"
+    elif univ == "tohoku-u":
+        univ_name = "東北大学"
+    elif univ == "osaka-u":
+        univ_name = "大阪大学"
+    elif univ == "kyoto-u":
+        univ_name = "京都大学"
+    elif univ == "kyusyu-u":
+        univ_name = "九州大学"
+    elif univ == "tokyo-city-u":
+        univ_name = "東京都立大学"
+    elif univ == "waseda-u":
+        univ_name = "早稲田大学"
+    elif univ == "keio-u":
+        univ_name = "慶應義塾大学"
+    elif univ == "jochi-u":
+        univ_name = "上智大学"
 
     context={
         'form':form,
@@ -93,5 +118,6 @@ def comment_form(request,univ,subject,year):
         'text':text,
         'dx':dx,
         'content':content,
+        'univ_name':univ_name,
         }
     return render(request, 'details/details_page.html',context)
