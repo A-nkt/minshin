@@ -119,5 +119,6 @@ def comment_form(request,univ,subject,year):
         'dx':dx,
         'content':content,
         'univ_name':univ_name,
+        'univ':univ,
         }
     return render(request, 'details/details_page.html',context)
