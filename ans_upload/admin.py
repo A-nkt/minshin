@@ -12,7 +12,7 @@ class FileAdmin(ModelAdmin):#wagtailを経由せずに、modelを定義し、管
     menu_order=290#1~999の整数、メニューの場所を返す。100より小さい場合トップに表示
     add_to_settings_menu=False#menuのサブに入れる場合は、True
     exclude_from_explorer=False#検索に入れる場合、True
-    list_display=("title","subtitle","subfield","subject","year","file","date")#表示するフィールド
+    list_display=("title","subtitle","subfield","subject","year","file","file2","file3","file4","file5","date")#表示するフィールド
     search_fields=("title","subtitle","file","date")#検索結果を返すフィールド
 
 modeladmin_register(FileAdmin)#登録してるclassを返す
