@@ -95,7 +95,7 @@ def comment_form(request,univ,subject,year):
                     'content':content,
                     'univ_name':univ_name,
                     }
-                return render(request,'details/details_page_landing.html',content)
+                return render(request,'details/details_page_landing.html',context)
         else:#ユーザーがログインしていて管理人意外
             form = CommentForm()
     else:#フォームが送信されていない場合
