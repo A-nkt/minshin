@@ -88,6 +88,8 @@ def comment_form(request,univ,subject,year):
         content = "物性物理学" + year
     elif subject == "math_kiso":
         content = "数理学（基礎）" + year
+    elif subject == "math_senmon":
+        content = "数理学（専門）" + year
     else:
         content=""
 
