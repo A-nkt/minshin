@@ -101,7 +101,7 @@ def comment_form(request,univ,subject,year):
         univ_name = "大阪大学"
     elif univ == "kyoto-u":
         univ_name = "京都大学"
-    elif univ == "kyusyu-u":
+    elif univ == "kyushu-u":
         univ_name = "九州大学"
     elif univ == "tokyo-city-u":
         univ_name = "東京都立大学"
@@ -111,6 +111,8 @@ def comment_form(request,univ,subject,year):
         univ_name = "慶應義塾大学"
     elif univ == "jochi-u":
         univ_name = "上智大学"
+    else:
+        univ_name = ""
 
     context={
         'form':form,
