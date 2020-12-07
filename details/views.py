@@ -17,7 +17,7 @@ def IntengerChecker(val):#整数を二桁に直す関数
         val=str(val)
     return val
 
-def subject_to_content(subject):
+def subject_to_content(subject,year):
     if subject == "math":
         content="数学"+year
     elif subject == "physics":
@@ -64,7 +64,7 @@ def univ_to_name(univ):
 
 # Create your views here.
 def comment_form(request,univ,subject,year):
-    content = subject_to_content(subject)
+    content = subject_to_content(subject,year)
     univ_name = univ_to_name(univ)
 
     subject_and_year=subject+year
