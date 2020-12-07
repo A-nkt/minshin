@@ -7,6 +7,7 @@ from wagtail.contrib.modeladmin.options import (
 
 admin.site.register(Image)
 
+admin.site.register(Comment)
 
 # Register your models here.
 class FileAdmin(ModelAdmin):#wagtailを経由せずに、modelを定義し、管理ページに反映させる
