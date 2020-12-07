@@ -17,8 +17,56 @@ def IntengerChecker(val):#整数を二桁に直す関数
         val=str(val)
     return val
 
+def subject_to_content(subject):
+    if subject == "math":
+        content="数学"+year
+    elif subject == "physics":
+        content="物理"+year
+    elif subject == "chemistry":
+        content="化学"+year
+    elif subject == "condensed_matter_physics":
+        content = "物性物理学" + year
+    elif subject == "math_kiso":
+        content = "数理学（基礎）" + year
+    elif subject == "math_senmon":
+        content = "数理学（専門）" + year
+    else:
+        content=""
+    return content
+
+def univ_to_name(univ):
+    if univ == "nagoya-u":
+        univ_name = "名古屋大学"
+    elif univ == "tokyo-u":
+        univ_name = "東京大学"
+    elif univ == "hokkaido-u":
+        univ_name = "北海道大学"
+    elif univ == "tohoku-u":
+        univ_name = "東北大学"
+    elif univ == "osaka-u":
+        univ_name = "大阪大学"
+    elif univ == "kyoto-u":
+        univ_name = "京都大学"
+    elif univ == "kyushu-u":
+        univ_name = "九州大学"
+    elif univ == "tokyo-city-u":
+        univ_name = "東京都立大学"
+    elif univ == "waseda-u":
+        univ_name = "早稲田大学"
+    elif univ == "keio-u":
+        univ_name = "慶應義塾大学"
+    elif univ == "jochi-u":
+        univ_name = "上智大学"
+    else:
+        univ_name = ""
+    return univ_name
+
+
 # Create your views here.
 def comment_form(request,univ,subject,year):
+    content = subject_to_content(subject)
+    univ_name = univ_to_name(univ)
+
     subject_and_year=subject+year
     text=''
     user = str(request.user)
@@ -43,7 +91,11 @@ def comment_form(request,univ,subject,year):
                 obj.subject_year=subject_and_year
                 obj.date = datetime.datetime.now().date()
                 obj.save()
-                return render(request,'details/details_page_landing.html')
+                context={
+                    'content':content,
+                    'univ_name':univ_name,
+                    }
+                return render(request,'details/details_page_landing.html',content)
         else:#ユーザーがログインしていて管理人意外
             form = CommentForm()
     else:#フォームが送信されていない場合
@@ -78,45 +130,7 @@ def comment_form(request,univ,subject,year):
         dx.loc[i,'img']='/static/img/'+ig
         i+=1
 
-    if subject == "math":
-        content="数学"+year
-    elif subject == "physics":
-        content="物理"+year
-    elif subject == "chemistry":
-        content="化学"+year
-    elif subject == "condensed_matter_physics":
-        content = "物性物理学" + year
-    elif subject == "math_kiso":
-        content = "数理学（基礎）" + year
-    elif subject == "math_senmon":
-        content = "数理学（専門）" + year
-    else:
-        content=""
 
-    if univ == "nagoya-u":
-        univ_name = "名古屋大学"
-    elif univ == "tokyo-u":
-        univ_name = "東京大学"
-    elif univ == "hokkaido-u":
-        univ_name = "北海道大学"
-    elif univ == "tohoku-u":
-        univ_name = "東北大学"
-    elif univ == "osaka-u":
-        univ_name = "大阪大学"
-    elif univ == "kyoto-u":
-        univ_name = "京都大学"
-    elif univ == "kyushu-u":
-        univ_name = "九州大学"
-    elif univ == "tokyo-city-u":
-        univ_name = "東京都立大学"
-    elif univ == "waseda-u":
-        univ_name = "早稲田大学"
-    elif univ == "keio-u":
-        univ_name = "慶應義塾大学"
-    elif univ == "jochi-u":
-        univ_name = "上智大学"
-    else:
-        univ_name = ""
 
     context={
         'form':form,
