@@ -27,9 +27,9 @@ def subject_to_content(subject,year):
     elif subject == "condensed_matter_physics":
         content = "物性物理学" + year
     elif subject == "math_kiso":
-        content = "数理学（基礎）" + year
+        content = "数理学専攻　数学（基礎）" + year
     elif subject == "math_senmon":
-        content = "数理学（専門）" + year
+        content = "数理学専攻　数学（専門）" + year
     else:
         content=""
     return content
