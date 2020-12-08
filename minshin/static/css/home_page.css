@@ -2,12 +2,53 @@
   color:black;
 }
 
+#news_fields{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin:1% auto;
+}
+.news-text{
+word-break : break-all;
+}
+
 /*PC*/
 @media screen and (min-width:960px){
+  #news_fields{
+    width:70% !important;
+    border: solid 1px silver;
+  }
+  .mr-auto{
+    font-size: 18px;
+  }
+  .toast-body{
+    font-size: 15px;
+  }
 }
 /*Tablet*/
-@media screen and (max-width:960px){
+@media screen and (min-width:561px) and (max-width:960px){
+  #news_fields{
+    width:80% !important;
+    border: solid 1px silver;
+  }
+  .mr-auto{
+    font-size: 18px;
+  }
+  .toast-body{
+    font-size: 15px;
+  }
 }
 /*SmartPhone*/
 @media screen and (max-width:560px){
+  #news_fields{
+    width:90% !important;
+    border: solid 1px silver;
+  }
+  .mr-auto{
+    font-size: 15px;
+  }
+  .toast-body{
+    font-size: 13px;
+  }
 }

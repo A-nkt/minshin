@@ -105,14 +105,7 @@ body,
   flex-direction: column;
   min-height: 100vh;
 }
-#news_fields{
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin:1% auto;
-  width:80vw!important;
-}
+
 li p{
   margin-top:20px;
   padding-top: 10px;
@@ -253,13 +246,6 @@ body,
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-#news_fields{
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin:1% auto;
 }
 li p{
   margin-top:20px;
@@ -453,8 +439,6 @@ body,#wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-#news_fields{
 }
 
 body > .container {
