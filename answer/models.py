@@ -47,6 +47,43 @@ class AnswerPage(Page):
         null=True,
         blank=True
     )
+    #2014
+    six=StreamField(
+        [
+            ("title_and_text",blocks.TitleAndTextBlockAns()),
+            ("full_richtext",blocks.RichtextBlockAns()),
+        ],
+        null=True,
+        blank=True
+    )
+    #2013
+    seven=StreamField(
+        [
+            ("title_and_text",blocks.TitleAndTextBlockAns()),
+            ("full_richtext",blocks.RichtextBlockAns()),
+        ],
+        null=True,
+        blank=True
+    )
+    #2012
+    eight=StreamField(
+        [
+            ("title_and_text",blocks.TitleAndTextBlockAns()),
+            ("full_richtext",blocks.RichtextBlockAns()),
+        ],
+        null=True,
+        blank=True
+    )
+    #2011
+    nine=StreamField(
+        [
+            ("title_and_text",blocks.TitleAndTextBlockAns()),
+            ("full_richtext",blocks.RichtextBlockAns()),
+        ],
+        null=True,
+        blank=True
+    )
+
 
     content_panels=Page.content_panels+[
         StreamFieldPanel('first'),
@@ -54,6 +91,10 @@ class AnswerPage(Page):
         StreamFieldPanel('third'),
         StreamFieldPanel('four'),
         StreamFieldPanel('five'),
+        StreamFieldPanel('six'),
+        StreamFieldPanel('seven'),
+        StreamFieldPanel('eight'),
+        StreamFieldPanel('nine'),
     ]
     class Meta:
         verbose_name="Answer Page"
