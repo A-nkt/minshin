@@ -44,6 +44,9 @@ li{
   margin-top: 0px!important;
   padding-top: 0px!important;
 }
+.hv:hover{
+  background-color: gray;
+}
 /*PC*/
 @media screen and (min-width:960px){
   .main_content{

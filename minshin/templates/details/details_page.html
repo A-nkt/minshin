@@ -14,6 +14,8 @@
 {% endblock %}
 
 
+
+
 {% block header_tab %}
 <div class="collapse navbar-collapse" id="navbarColor01">
   <ul class="navbar-nav mr-auto">
@@ -58,6 +60,7 @@
 
 {% block extra_js %}
     <script type="text/javascript" src="{% static 'js/details.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/alert.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -88,30 +91,6 @@
             {% endfor %}
         </ul>
     </div>
-
-  <!--
-  <div id="full">
-    <img src="{% static 'img/computer-1209641_1920.jpg' %}">
-  </div>
-
-    <ul id="thumb">
-      <li><img src="{% static 'img/startup-593327_1920.jpg' %}"></li>
-      <li><img src="{% static 'img/writing-1149962_1920.width-3500.jpg' %}"></li>
-      <li><img src="{% static 'img/computer-1209641_1920.jpg' %}"></li>
-      <li><img src="/img/thumb04.jpg"></li>
-      <li><img src="/img/thumb05.jpg"></li>
-    </ul>
--->
-  <!--
-  <img src="{% static 'img/computer-1209641_1920.jpg' %}" name="area1">
-
-　<input type="button" onclick="showimg1()" value="画像1">
-　<input type="button" onclick="showimg2()" value="画像2">
-　<input type="button" onclick="showimg3()" value="画像3">
-
--->
-
-
   <div class="content_form">
     {% for index, row in df.iterrows %}
       {% if row.odd == True %}
@@ -160,9 +139,11 @@
           </div>
           <div class="send comment">コメント：</div>
           {{ form.message |add_class:"form-message"}}
-          <div class="send comment">{{ form.rate }}</div>
+          <div class="send comment" name="rate">{{ form.rate }}</div>
       </table>
-      <div class="job_input_btn"><input type="submit" class="btn btn-primary"></div>
+      <div class="job_input_btn">
+        <input type="submit" class="btn btn-primary" onclick="return check()">
+      </div>
     </form>
   </div>
 

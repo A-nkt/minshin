@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import CommentForm
 from .models import Comment,Image
 from django_pandas.io import read_frame
@@ -71,6 +71,11 @@ def comment_form(request,univ,subject,year):
     text=''
     user = str(request.user)
     if request.method == 'POST':#フォームが送信された時
+        print(request.POST['rate'])
+        if request.POST['rate'] == '0':
+            print("TEST")
+            return redirect('/ans_past/'+univ+'/'+subject+'/'+year+'/')
+
         if str(user) =='AnonymousUser' and request.POST['name']!='管理人':#ログイン×管理人以外を使用している時
             form = CommentForm(request.POST)#送られたFormを変数に格納
             if form.is_valid():
@@ -79,7 +84,11 @@ def comment_form(request,univ,subject,year):
                 obj.subject_year=subject_and_year
                 obj.date = datetime.datetime.now().date()
                 obj.save()
-                return render(request,'details/details_page_landing.html')
+                context={
+                    'content':content,
+                    'univ_name':univ_name,
+                    }
+                return render(request,'details/details_page_landing.html',context)
         elif str(user) =='AnonymousUser' and request.POST['name']=='管理人':#ログインしていないユーザーが管理人を使用する時
             form = CommentForm()
             text='管理人は使用することができません。'
@@ -129,8 +138,6 @@ def comment_form(request,univ,subject,year):
         blob.download_to_filename(outfile)
         dx.loc[i,'img']='/static/img/'+ig
         i+=1
-
-
 
     context={
         'form':form,

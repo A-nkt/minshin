@@ -16,6 +16,7 @@ from wagtail.contrib.forms.models import (
 #
 class Comment(models.Model):
     CONFIDENCE = (
+            (0, '値を選択してください'),
             (1, '合ってる(8割)'),
             (2, '概ね合ってる（6割）'),
             (3, 'あまり合っていない（４割）'),

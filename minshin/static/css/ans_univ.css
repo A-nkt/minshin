@@ -1,3 +1,6 @@
+.univ:hover{
+  font-weight: bold;
+}
 /*PC*/
 @media screen and (min-width:960px){
   .ans_univ_content{
