@@ -1,6 +1,9 @@
 .toast-body{
   color:black;
 }
+.toast-body li:hover{
+  font-weight: bold;
+}
 
 #news_fields{
   top: 0;
@@ -8,6 +11,7 @@
   bottom: 0;
   left: 0;
   margin:1% auto;
+  text-align: center;
 }
 .news-text{
 word-break : break-all;
@@ -19,7 +23,7 @@ word-break : break-all;
     width:70% !important;
     border: solid 1px silver;
   }
-  .mr-auto{
+  .news{
     font-size: 18px;
   }
   .toast-body{
