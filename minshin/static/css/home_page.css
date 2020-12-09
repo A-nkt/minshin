@@ -4,6 +4,14 @@
 .toast-body li:hover{
   font-weight: bold;
 }
+.wh{
+  text-align: center;
+	display: block;
+}
+.wh_child{
+  text-align: left;
+	display: inline-block;
+}
 
 #news_fields{
   top: 0;
@@ -11,7 +19,6 @@
   bottom: 0;
   left: 0;
   margin:1% auto;
-  text-align: center;
 }
 .news-text{
 word-break : break-all;

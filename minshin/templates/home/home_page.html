@@ -57,16 +57,18 @@
   </div>
 
   <div id="news_fields" class="wh">
-    <div class="toast-header">
-      <strong class="mr-auto news">News</strong>
-      <!--button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</>
-      </button-->
-    </div>
-    <div class="toast-body">
-      {% for block in page.content %}
-      {% include_block block %}
-      {% endfor %}
+    <div class="wh_child">
+      <div class="toast-header">
+        <strong class="mr-auto news">News</strong>
+        <!--button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</>
+        </button-->
+      </div>
+      <div class="toast-body">
+        {% for block in page.content %}
+        {% include_block block %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 
