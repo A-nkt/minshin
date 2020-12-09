@@ -6,6 +6,12 @@ li{
   /*text-align: center!important;*/
   padding-left: 5%!important;
   padding-bottom: 20px;
+  text-align: center;
+	display: block;
+}
+.child_content{
+  text-align: left;
+	display: inline-block;
 }
 .job_input_btn{
   padding-top: 20px;

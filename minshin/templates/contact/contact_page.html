@@ -58,16 +58,18 @@
 
 
 <div class="content_contact">
-  <h1>{{page.title}}</h1>
-  <p>{{self.intro|richtext}}</p>
+  <div class="child_content">
+    <h1>{{page.title}}</h1>
+    <p>{{self.intro|richtext}}</p>
 
-  <form action="{% pageurl page %}" method="POST">
-    {% csrf_token %}
-    <table class="contact_form">
-        {{ form.as_table }}
-    </table>
-    <div class="job_input_btn"><input type="submit" class="btn btn-primary"></div>
-  </form>
+    <form action="{% pageurl page %}" method="POST">
+      {% csrf_token %}
+      <table class="contact_form">
+          {{ form.as_table }}
+      </table>
+      <div class="job_input_btn"><input type="submit" class="btn btn-primary"></div>
+    </form>
+  </div>
 </div>
 
 
