@@ -67,6 +67,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'captcha',#スパム対策
+    'wagtailcaptcha',#スパム対策
 ]
 
 MIDDLEWARE = [
@@ -209,3 +212,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #EMAIL_HOST_PASSWORD = 'dbbxugglyeybdkvv'
 #EMAIL_PORT = 587
 #EMAIL_USE_TLS = True
+
+
+#Recapcha settings
+RECAPTCHA_PUBLIC_KEY = "6LdcE_8ZAAAAAKDrHE3PVyJlEc_InxPJoUv8aEuH"
+RECAPTCHA_PRIVATE_KEY = "6LdcE_8ZAAAAAGoIUjyscjtNjiIpYsvjxuhjt1BJ"
+NOCAPCHA = True

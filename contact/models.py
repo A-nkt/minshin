@@ -13,6 +13,8 @@ from wagtail.contrib.forms.models import (
     AbstractFormField
 )
 
+from wagtailcaptcha.models import WagtailCaptchaEmailForm
+
 # Create your models here.
 class FormField(AbstractFormField):#Formのフィールドを定義
     Page=ParentalKey(
@@ -21,7 +23,7 @@ class FormField(AbstractFormField):#Formのフィールドを定義
         related_name='form_fields',
     )
 
-class ContactPage(AbstractEmailForm):#フォーム機能を実装したclassを定義
+class ContactPage(WagtailCaptchaEmailForm):#フォーム機能を実装したclassを定義
     template="contact/contact_page.html"#返すhtmlファイルを定義
     landing_page_template = "contact/contact_page_landing.html"
 
