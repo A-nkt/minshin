@@ -1,0 +1,30 @@
+.fixHeaderAlert {
+  background-color: #fefcc9;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  padding: 7px 10px;
+  z-index: 2; }
+  .fixHeaderAlert__info {
+    font-size: 13px;
+    color: #333333; }
+  .fixHeaderAlert__error {
+    font-size: 13px;
+    color: #b40000; }
+  .fixHeaderAlert__link {
+    font-size: 16px;
+    margin-top: 5px;
+    text-decoration: underline; }
+
+.zWrap {
+  z-index: 1;
+  position: relative; }
+
+#resultbox .gakkoList__item--left .addList__button--small {
+  margin-top: 5px; }
+
+#resultbox .gakkoList__item--right {
+  min-height: 130px; }
