@@ -3,5 +3,5 @@
 *.swp
 .env
 /media/
-/static/css/minto/*
+/minshin/static/css/minto/*
 ads.txt
