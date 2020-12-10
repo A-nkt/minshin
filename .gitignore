@@ -1,6 +1,6 @@
 *.pyc
 .DS_Store
 *.swp
-/static/
 .env
 /media/
+/static/css/minto/
