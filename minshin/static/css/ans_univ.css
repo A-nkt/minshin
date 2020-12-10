@@ -1,5 +1,6 @@
 .univ:hover{
   font-weight: bold;
+  font-size: 110%;
 }
 /*PC*/
 @media screen and (min-width:960px){
