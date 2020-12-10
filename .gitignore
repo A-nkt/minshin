@@ -3,4 +3,4 @@
 *.swp
 .env
 /media/
-ads.txt
+.gitignore
