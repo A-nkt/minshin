@@ -3,4 +3,4 @@
 *.swp
 .env
 /media/
-/minshin/static/css/minto
+minshin/static/css/minto
