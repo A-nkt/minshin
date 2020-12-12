@@ -25,7 +25,7 @@ class MintoPage(Page):
         context = super().get_context(request, *args, **kwargs)
         all_posts = ContentsPage.objects.live().public().order_by('-first_published_at')
 
-        paginator = Paginator(all_posts,4) #１ページ10記事
+        paginator = Paginator(all_posts,8) #１ページ10記事
 
         page = request.GET.get("page") #取得したページ
         try:
