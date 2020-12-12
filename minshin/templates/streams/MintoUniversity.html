@@ -1,24 +1,26 @@
 {% load wagtailimages_tags %}
 
-<div class="__shi_m_gakubu_casette __shi_m_gakubu_casette_override gpack  __shi_js_isHidden" id="univ">
-  <span class="rootProductCd" style="display: none;">9001407978</span>
-  <div class="__shi_l_row __shi_l_contents_top">
-    <div class="__shi_h_fl_l __shi_l_fix_580">
-      <h2 class="__shi_m_heading_primary">
-        <a href="{{self.link}}-u/" target="_blank" onclick="var s2=s_gi(s_account);s2.tl(this,'o','search_result_list_base')">{{self.name}}</a>
-      </h2>
-  <div class="__shi_h_mb __shi_m_text_group">
-    <p class="__shi_h_mt_5">{{self.sub}}</p>
-  <p class="__shi_h_mt_5">{{self.text}}</p>
-  </div>
-      </div>
-    <div class="__shi_h_fl_r">
-      <div class="__shi_l_row __shi_l_fix_340">
-        <div class="__shi_h_fl_l">
-          {% image self.images width-2000 as img1 %}
-          <img src="{{ img1.url }}">
+{% if post.title == self.name %}
+  <div class="__shi_m_gakubu_casette __shi_m_gakubu_casette_override gpack  __shi_js_isHidden" id="univ">
+    <span class="rootProductCd" style="display: none;">9001407978</span>
+    <div class="__shi_l_row __shi_l_contents_top">
+      <div class="__shi_h_fl_l __shi_l_fix_580">
+        <h2 class="__shi_m_heading_primary">
+          <a href="{{self.link}}-u/" target="_blank" onclick="var s2=s_gi(s_account);s2.tl(this,'o','search_result_list_base')">{{self.name}}</a>
+        </h2>
+    <div class="__shi_h_mb __shi_m_text_group">
+      <p class="__shi_h_mt_5">{{self.sub}}</p>
+    <p class="__shi_h_mt_5">{{self.text}}</p>
+    </div>
+        </div>
+      <div class="__shi_h_fl_r">
+        <div class="__shi_l_row __shi_l_fix_340">
+          <div class="__shi_h_fl_l">
+            {% image self.images width-2000 as img1 %}
+            <img src="{{ img1.url }}">
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+{% endif %}
