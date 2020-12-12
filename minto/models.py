@@ -23,7 +23,7 @@ class MintoPage(Page):
     ]
     def get_context(self, request, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
-        all_posts = ContentsPage.objects.live().public().order_by('-first_published_at')
+        all_posts = ContentsPage.objects.live().public()#.order_by('-first_published_at')
 
         paginator = Paginator(all_posts,8) #１ページ10記事
 
