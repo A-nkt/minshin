@@ -368,7 +368,8 @@ padding-left: 15px;
   .img-group{
     margin-left: 50px;
   }
-  .gazo-box1 img{
+  .gazo-box1 img,.gazo-box2 img{
+    opacity: 0.5;
   }
   .gazo-box2 img{
     margin-left: 60px;
