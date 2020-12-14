@@ -31,6 +31,10 @@ class Comment(models.Model):
     univ = models.CharField(blank = True,null = True, max_length = 100)#大学名
     subject_year = models.CharField(blank = True,null = True, max_length = 100)#教科と試験年
 
+    def __str__(self):
+        template='{0.name} '+','+'{0.univ}'+','+'{0.subject_year}'
+        return template.format(self)
+
 class Image(models.Model):
     answer = models.ImageField(upload_to = 'upload/')
     univ = models.CharField(blank = True,null = True, max_length = 100)
