@@ -23,7 +23,7 @@ class AnswerPage(Page):
         null=True,
         blank=True,
     )
-    second=StreamField(
+    year_2018=StreamField(
         [
             ("title_and_text",blocks.TitleAndTextBlockAns()),
             ("full_richtext",blocks.RichtextBlockAns()),
@@ -31,7 +31,7 @@ class AnswerPage(Page):
         null=True,
         blank=True
     )
-    third=StreamField(
+    year_2017=StreamField(
         [
             ("title_and_text",blocks.TitleAndTextBlockAns()),
             ("full_richtext",blocks.RichtextBlockAns()),
@@ -39,7 +39,7 @@ class AnswerPage(Page):
         null=True,
         blank=True
     )
-    four=StreamField(
+    year_2016=StreamField(
         [
             ("title_and_text",blocks.TitleAndTextBlockAns()),
             ("full_richtext",blocks.RichtextBlockAns()),
@@ -47,7 +47,7 @@ class AnswerPage(Page):
         null=True,
         blank=True
     )
-    five=StreamField(
+    year_2015=StreamField(
         [
             ("title_and_text",blocks.TitleAndTextBlockAns()),
             ("full_richtext",blocks.RichtextBlockAns()),
@@ -56,7 +56,7 @@ class AnswerPage(Page):
         blank=True
     )
     #2014
-    six=StreamField(
+    year_2014=StreamField(
         [
             ("title_and_text",blocks.TitleAndTextBlockAns()),
             ("full_richtext",blocks.RichtextBlockAns()),
@@ -65,7 +65,7 @@ class AnswerPage(Page):
         blank=True
     )
     #2013
-    seven=StreamField(
+    year_2013=StreamField(
         [
             ("title_and_text",blocks.TitleAndTextBlockAns()),
             ("full_richtext",blocks.RichtextBlockAns()),
@@ -74,7 +74,7 @@ class AnswerPage(Page):
         blank=True
     )
     #2012
-    eight=StreamField(
+    year_2012=StreamField(
         [
             ("title_and_text",blocks.TitleAndTextBlockAns()),
             ("full_richtext",blocks.RichtextBlockAns()),
@@ -83,7 +83,7 @@ class AnswerPage(Page):
         blank=True
     )
     #2011
-    nine=StreamField(
+    year_2011=StreamField(
         [
             ("title_and_text",blocks.TitleAndTextBlockAns()),
             ("full_richtext",blocks.RichtextBlockAns()),
@@ -96,14 +96,14 @@ class AnswerPage(Page):
     content_panels=Page.content_panels+[
         StreamFieldPanel('year_2020'),
         StreamFieldPanel('year_2019'),
-        StreamFieldPanel('second'),
-        StreamFieldPanel('third'),
-        StreamFieldPanel('four'),
-        StreamFieldPanel('five'),
-        StreamFieldPanel('six'),
-        StreamFieldPanel('seven'),
-        StreamFieldPanel('eight'),
-        StreamFieldPanel('nine'),
+        StreamFieldPanel('year_2018'),
+        StreamFieldPanel('year_2017'),
+        StreamFieldPanel('year_2016'),
+        StreamFieldPanel('year_2015'),
+        StreamFieldPanel('year_2014'),
+        StreamFieldPanel('year_2013'),
+        StreamFieldPanel('year_2012'),
+        StreamFieldPanel('year_2011'),
     ]
     class Meta:
         verbose_name="Answer Page"
