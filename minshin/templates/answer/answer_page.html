@@ -61,7 +61,10 @@
 
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#first">2019</a>
+      <a class="nav-link active" data-toggle="tab" href="#year_2020">2020</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#first">2019</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="tab" href="#second">2018</a>
@@ -102,7 +105,12 @@
     </li-->
   </ul>
   <div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade active show" id="first">
+    <div class="tab-pane fade active show" id="year_2020">
+      {% for block in page.year_2020 %}
+      {% include_block block %}
+      {% endfor %}
+    </div>
+    <div class="tab-pane fade" id="first">
       {% for block in page.first %}
       {% include_block block %}
       {% endfor %}

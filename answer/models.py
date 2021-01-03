@@ -7,6 +7,14 @@ from streams import blocks
 # 各大学の5年分が対象となる
 class AnswerPage(Page):
     template="answer/answer_page.html"
+    year_2020=StreamField(
+        [
+            ("title_and_text",blocks.TitleAndTextBlockAns()),
+            ("full_richtext",blocks.RichtextBlockAns()),
+        ],
+        null=True,
+        blank=True,
+    )
     first=StreamField(
         [
             ("title_and_text",blocks.TitleAndTextBlockAns()),
@@ -86,6 +94,7 @@ class AnswerPage(Page):
 
 
     content_panels=Page.content_panels+[
+        StreamFieldPanel('year_2020'),
         StreamFieldPanel('first'),
         StreamFieldPanel('second'),
         StreamFieldPanel('third'),
