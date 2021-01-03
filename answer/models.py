@@ -15,7 +15,7 @@ class AnswerPage(Page):
         null=True,
         blank=True,
     )
-    first=StreamField(
+    year_2019=StreamField(
         [
             ("title_and_text",blocks.TitleAndTextBlockAns()),
             ("full_richtext",blocks.RichtextBlockAns()),
@@ -95,7 +95,7 @@ class AnswerPage(Page):
 
     content_panels=Page.content_panels+[
         StreamFieldPanel('year_2020'),
-        StreamFieldPanel('first'),
+        StreamFieldPanel('year_2019'),
         StreamFieldPanel('second'),
         StreamFieldPanel('third'),
         StreamFieldPanel('four'),

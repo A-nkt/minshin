@@ -64,7 +64,7 @@
       <a class="nav-link active" data-toggle="tab" href="#year_2020">2020</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#first">2019</a>
+      <a class="nav-link" data-toggle="tab" href="#year_2019">2019</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="tab" href="#second">2018</a>
@@ -90,19 +90,6 @@
     <li class="nav-item">
       <a class="nav-link" data-toggle="tab" href="#nine">2011</a>
     </li>
-    <!--li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
-    </li-->
-    <!--li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-      </div>
-    </li-->
   </ul>
   <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active show" id="year_2020">
@@ -110,8 +97,8 @@
       {% include_block block %}
       {% endfor %}
     </div>
-    <div class="tab-pane fade" id="first">
-      {% for block in page.first %}
+    <div class="tab-pane fade" id="year_2019">
+      {% for block in page.year_2019 %}
       {% include_block block %}
       {% endfor %}
     </div>
@@ -158,11 +145,5 @@
   </div>
 
 </div>
-<!--
-<h1>{{self.title}}</h1>
-{% for block in page.content %}
-{% include_block block %}
-{% endfor %}
--->
 
 {% endblock %}
