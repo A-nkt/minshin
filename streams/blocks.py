@@ -99,6 +99,7 @@ class MintoContentValue(blocks.StructBlock):
     research_name = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="研究科名")
     IDname = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="IDname",default="Chart")
     RinkID = blocks.CharBlock(max_length=100,blank=True,null=True,help_text="RinkID")
+    int0 = blocks.IntegerBlock(blank=True,null=True,help_text="500点以下")
     int1 = blocks.IntegerBlock(blank=True,null=True,help_text="500~600点")
     int2 = blocks.IntegerBlock(blank=True,null=True,help_text="600~700点")
     int3 = blocks.IntegerBlock(blank=True,null=True,help_text="700~800点")

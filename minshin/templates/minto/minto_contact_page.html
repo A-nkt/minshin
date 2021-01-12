@@ -37,7 +37,7 @@
       <a id="right-tab" target="_blank" class="nav-link" href="https://kenkyu-navi.com/index.php?page=top">研究室選びはこちらから</a>
     </li>
   </ul>
-  
+
 </div>
 {% endblock %}
 
@@ -76,7 +76,7 @@
        </div>
      {% endfor %}
     </table>
-    <div class="job_input_btn"><input type="submit" class="btn btn-primary"></div>
+    <div class="job_input_btn"><input type="submit" id = "btn-id" class="btn btn-primary" onclick="return check()"></div>
   </form>
 </div>
 
@@ -89,7 +89,9 @@
 
 </div>
 
-
+{% block extra_js %}
+<script type="text/javascript" src="{% static 'js/minto_contents.js' %}"></script>
+{% endblock %}
 
 
 

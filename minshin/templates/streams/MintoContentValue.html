@@ -7,16 +7,17 @@ var ctx = document.getElementById("{{self.IDname}}").getContext('2d');
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["500~600点", "600~700点", "700~800点", "800~900点","900点以上"],
+    labels: ["500点以下","500~600点", "600~700点", "700~800点", "800~900点","900点以上"],
     datasets: [{
         backgroundColor: [
-            "#BB5179",
+            "#ff69b4",
+            "#ff6347",
             "#FAFF67",
             "#58A27C",
+            "#87cefa",
             "#3C00FF",
-            "black",
         ],
-        data: [{{self.int1}},{{self.int2}},{{self.int3}},{{self.int4}},{{self.int5}}]
+        data: [{{self.int0}},{{self.int1}},{{self.int2}},{{self.int3}},{{self.int4}},{{self.int5}}]
     }]
   },
   options: {
