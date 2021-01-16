@@ -12,6 +12,8 @@ from django.urls import path
 
 from wagtail.contrib.sitemaps.views import sitemap
 
+from django.views.generic import TemplateView
+
 urlpatterns = [
     path('',include('ans_upload.urls')),#ans_upload用のurl
     url(r'^django-admin/', admin.site.urls),#Djangoの管理画面
@@ -20,6 +22,7 @@ urlpatterns = [
     url(r'^documents/', include(wagtaildocs_urls)),#存在しない模様(2020.08.16)
     url(r'^search/$', search_views.search, name='search'),#検索
     path('', include('details.urls')),#detailsのために使用
+     path('ads.txt', TemplateView.as_view(template_name='ads.txt', content_type='text/plain')),  # 追加
 ]
 
 if settings.DEBUG:#DEBUGの時
