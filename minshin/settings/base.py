@@ -205,13 +205,14 @@ BASE_URL = 'http://example.com'
 
 django_heroku.settings(locals())
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-""" メールサーバー用"""
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_HOST_USER = 'dsduoa31@gmail.com'
-#EMAIL_HOST_PASSWORD = 'dbbxugglyeybdkvv'
-#EMAIL_PORT = 587
-#EMAIL_USE_TLS = True
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'minnanoinshin@gmail.com'#'somy.htmskl@gmail.com'
+EMAIL_HOST_PASSWORD = 'Zg56gr7W'#'dbbxugglyeybdkvv'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 
 
 #Recapcha settings

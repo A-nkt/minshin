@@ -36,7 +36,6 @@ class ContactPage(WagtailCaptchaEmailForm):#フォーム機能を実装したcla
         FieldPanel('thank_you_text'),
         MultiFieldPanel([
             FieldRowPanel([
-                FieldPanel('from_address',classname="col6"),
                 FieldPanel('to_address',classname='col6'),
             ]),
             FieldPanel('subject'),

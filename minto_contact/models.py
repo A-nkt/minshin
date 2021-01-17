@@ -27,4 +27,10 @@ class MintoContactPage(AbstractEmailForm):#フォーム機能を実装したclas
 
     content_panels=AbstractEmailForm.content_panels+[#adminのパネルを定義
         InlinePanel('form_fields',label='Form Fields'),
+        MultiFieldPanel([
+            FieldRowPanel([
+                FieldPanel('to_address', classname="col6"),
+            ]),
+            FieldPanel("subject"),
+        ], heading="Email Settings"),
     ]
