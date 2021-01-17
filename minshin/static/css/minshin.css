@@ -138,9 +138,6 @@ padding: 60px 15px 0;
 margin: 20px 0;
 color:white!important;
 }
-.icon-facebook{
-  color: red;
-}
 
 .footer > .container {
 padding-right: 15px;
@@ -283,9 +280,6 @@ padding: 60px 15px 0;
 margin: 20px 0;
 color:white!important;
 }
-.icon-facebook{
-  color: red;
-}
 
 .footer > .container {
 padding-right: 15px;
@@ -391,10 +385,10 @@ padding-left: 15px;
 .footer{
   text-align:center;
   }
-  #twitter,#facebook{
+  #twitter,#facebook,#youtube{
     display: inline-block;
   }
-  #facebook{
+  #twitter{
     padding-bottom: 30px;
     padding-right: 30px;
   }
@@ -449,9 +443,6 @@ padding: 10px 15px 0;
 .text-muted {
 margin: 20px 0;
 color:white!important;
-}
-.icon-facebook{
-  color: red;
 }
 
 .footer > .container {
