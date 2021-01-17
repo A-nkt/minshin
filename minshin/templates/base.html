@@ -82,15 +82,22 @@
           <ul class="container">
             {% if settings.site_settings.SocialMediaSettings.facebook %}
               <li class="icon-facebook" id="facebook">
-                <a href="{{settings.site_settings.SocialMediaSettings.facebook}}">
+                <a href="{{settings.site_settings.SocialMediaSettings.facebook}}" target="_blank">
                   <i class="fab fa-facebook-f fa-3x" style="color:white"></i>
                 </a>
               </li>
             {% endif %}
             {% if settings.site_settings.SocialMediaSettings.twitter %}
               <li class="icon-twitter" id="twitter">
-                <a href="{{settings.site_settings.SocialMediaSettings.twitter}}">
+                <a href="{{settings.site_settings.SocialMediaSettings.twitter}}" target="_blank">
                   <i class="fab fa-twitter fa-3x" style="color:white"></i>
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.site_settings.SocialMediaSettings.youtube %}
+              <li class="icon-youtube" id="youtube">
+                <a href="{{settings.site_settings.SocialMediaSettings.youtube}}" target="_blank">
+                  <i class="fab fa-youtube fa-3x" style="color:white"></i>
                 </a>
               </li>
             {% endif %}
