@@ -1,8 +1,3 @@
-/*
-フォーム入力値の適正化を行う
-１　大学名が「その他」の場合、記入があるか？
-２　研究科名は「研究科」だけではなく入力がなされているか？
-*/
 function check(){
   var input_univ = document.getElementById( "id_da-xue-ming" ).value ;
   var univ_etc = document.getElementById( "id_sonota-woxuan-ze-saretachang-he-ha-kochiraworu-li-shitekudasai" ).value ;
