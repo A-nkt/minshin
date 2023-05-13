@@ -1,99 +1,88 @@
-from django.db import models
-
-from wagtail.admin.edit_handlers import FieldPanel,StreamFieldPanel
+from wagtail.admin.edit_handlers import StreamFieldPanel
 from wagtail.core.models import Page
 from wagtail.core.fields import StreamField
 from streams import blocks
+
+
 # 各大学の5年分が対象となる
 class AnswerPage(Page):
-    template="answer/answer_page.html"
-    year_2020=StreamField(
+    template = "answer/answer_page.html"
+    year_2020 = StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlockAns()),
-            ("full_richtext",blocks.RichtextBlockAns()),
+            ("title_and_text", blocks.TitleAndTextBlockAns()),
+            ("full_richtext", blocks.RichtextBlockAns()),
         ],
-        null=True,
-        blank=True,
+        null=True, blank=True,
     )
-    year_2019=StreamField(
+    year_2019 = StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlockAns()),
-            ("full_richtext",blocks.RichtextBlockAns()),
+            ("title_and_text", blocks.TitleAndTextBlockAns()),
+            ("full_richtext", blocks.RichtextBlockAns()),
         ],
-        null=True,
-        blank=True,
+        null=True, blank=True,
     )
-    year_2018=StreamField(
+    year_2018 = StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlockAns()),
-            ("full_richtext",blocks.RichtextBlockAns()),
+            ("title_and_text", blocks.TitleAndTextBlockAns()),
+            ("full_richtext", blocks.RichtextBlockAns()),
         ],
-        null=True,
-        blank=True
+        null=True, blank=True
     )
-    year_2017=StreamField(
+    year_2017 = StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlockAns()),
-            ("full_richtext",blocks.RichtextBlockAns()),
+            ("title_and_text", blocks.TitleAndTextBlockAns()),
+            ("full_richtext", blocks.RichtextBlockAns()),
         ],
-        null=True,
-        blank=True
+        null=True, blank=True
     )
-    year_2016=StreamField(
+    year_2016 = StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlockAns()),
-            ("full_richtext",blocks.RichtextBlockAns()),
+            ("title_and_text", blocks.TitleAndTextBlockAns()),
+            ("full_richtext", blocks.RichtextBlockAns()),
         ],
-        null=True,
-        blank=True
+        null=True, blank=True
     )
-    year_2015=StreamField(
+    year_2015 = StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlockAns()),
-            ("full_richtext",blocks.RichtextBlockAns()),
+            ("title_and_text", blocks.TitleAndTextBlockAns()),
+            ("full_richtext", blocks.RichtextBlockAns()),
         ],
-        null=True,
-        blank=True
+        null=True, blank=True
     )
-    #2014
-    year_2014=StreamField(
+    # 2014
+    year_2014 = StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlockAns()),
-            ("full_richtext",blocks.RichtextBlockAns()),
+            ("title_and_text", blocks.TitleAndTextBlockAns()),
+            ("full_richtext", blocks.RichtextBlockAns()),
         ],
-        null=True,
-        blank=True
+        null=True, blank=True
     )
-    #2013
-    year_2013=StreamField(
+    # 2013
+    year_2013 = StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlockAns()),
-            ("full_richtext",blocks.RichtextBlockAns()),
+            ("title_and_text", blocks.TitleAndTextBlockAns()),
+            ("full_richtext", blocks.RichtextBlockAns()),
         ],
-        null=True,
-        blank=True
+        null=True, blank=True
     )
-    #2012
-    year_2012=StreamField(
+    # 2012
+    year_2012 = StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlockAns()),
-            ("full_richtext",blocks.RichtextBlockAns()),
+            ("title_and_text", blocks.TitleAndTextBlockAns()),
+            ("full_richtext", blocks.RichtextBlockAns()),
         ],
-        null=True,
-        blank=True
+        null=True, blank=True
     )
-    #2011
-    year_2011=StreamField(
+    # 2011
+    year_2011 = StreamField(
         [
-            ("title_and_text",blocks.TitleAndTextBlockAns()),
-            ("full_richtext",blocks.RichtextBlockAns()),
+            ("title_and_text", blocks.TitleAndTextBlockAns()),
+            ("full_richtext", blocks.RichtextBlockAns()),
         ],
-        null=True,
-        blank=True
+        null=True, blank=True
     )
 
-
-    content_panels=Page.content_panels+[
+    content_panels = Page.content_panels + [
         StreamFieldPanel('year_2020'),
         StreamFieldPanel('year_2019'),
         StreamFieldPanel('year_2018'),
@@ -105,6 +94,7 @@ class AnswerPage(Page):
         StreamFieldPanel('year_2012'),
         StreamFieldPanel('year_2011'),
     ]
+
     class Meta:
-        verbose_name="Answer Page"
-        verbose_name_plural="Answer Pages"
+        verbose_name = "Answer Page"
+        verbose_name_plural = "Answer Pages"
